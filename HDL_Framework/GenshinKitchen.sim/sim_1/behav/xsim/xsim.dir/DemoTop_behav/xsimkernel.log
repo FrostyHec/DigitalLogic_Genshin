@@ -2,3 +2,6 @@ Running: xsim.dir/DemoTop_behav/xsimk.exe -simmode gui -wdb DemoTop_behav.wdb -s
 Design successfully loaded
 Design Loading Memory Usage: 8616 KB (Peak: 8616 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9564 KB (Peak: 9564 KB)
+Simulation CPU Usage: 0 ms

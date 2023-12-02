@@ -24,6 +24,9 @@
 module TargetRegister(
 input [5:0] next_state,
 input next_state_activation,
-output [5:0] state
+output reg [5:0] state  
     );
+    always @(posedge next_state_activation) begin
+        state<=next_state;
+    end
 endmodule
