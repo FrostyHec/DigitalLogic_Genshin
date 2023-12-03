@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TargetStateMachine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TargetStateMachine
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/HZD_Simulation/new/Sim_TSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim_TSM
