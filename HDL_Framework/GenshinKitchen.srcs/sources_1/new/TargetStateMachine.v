@@ -25,7 +25,24 @@ module TargetStateMachine(
 input [1:0] button,
 input btn_en,
 input [5:0] state,
-output [5:0] next_state,
-output activation
+output reg [5:0] next_state,
+output reg activation
     );
+    always @(button) begin
+        activation=1'b0;
+        if(btn_en) begin
+            if(button[`Encoder_Btn_TargetUp]) begin
+                next_state=state+1;
+                activation=1'b1; 
+            end else if(button[`Encoder_Btn_TargetDown]) begin
+                next_state=state-1;
+                activation=1'b1;
+            end
+            if(next_state>`Targeting_Max) begin
+                next_state=`Targeting_Initial; 
+            end else if(next_state<`Targeting_Initial) begin
+                next_state=`Targeting_Max;
+            end
+        end
+    end
 endmodule

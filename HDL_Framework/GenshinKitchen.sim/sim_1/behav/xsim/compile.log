@@ -1,4 +1,2 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TargetRegister.v" into library work
 INFO: [VRFC 10-311] analyzing module TargetRegister
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sim_1/new/SimForReg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SimForReg
