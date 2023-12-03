@@ -62,14 +62,14 @@ module DemoTop(
     );
         
     UART uart_module(
-          .clock(uart_clk_16),     // uart clock. Please use 16 x BultRate. (e.g. 9600 * 16 = 153600Hz£©
+          .clock(uart_clk_16),     // uart clock. Please use 16 x BultRate. (e.g. 9600 * 16 = 153600Hzï¿½ï¿½
           .reset(0),               // reset
           
           .io_pair_rx(rx),          // rx, connect to R5 please
           .io_pair_tx(tx),         // tx, connect to T4 please
           
           .io_dataIn_bits(dataIn_bits),     // (a) byte from DevelopmentBoard => GenshinKitchen
-          .io_dataIn_ready(dataIn_ready),   // referring (a)£»pulse 1 after a byte tramsmit success.
+          .io_dataIn_ready(dataIn_ready),   // referring (a)ï¿½ï¿½pulse 1 after a byte tramsmit success.
           
           .io_dataOut_bits(dataOut_bits),     // (b) byte from GenshinKitchen => DevelopmentBoard, only available if io_dataOut_valid=1
           .io_dataOut_valid(dataOut_valid)  // referring (b)
