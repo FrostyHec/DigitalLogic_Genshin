@@ -57,4 +57,41 @@
 `define Receiver_Feedback_MachineHasItem 5
 
 
+//--------------The Game Itself---------------
+//-----targets-----
+//-----stroage create-----
+`define Game_Flower_box 6'b000_001
+`define Game_Wheat_box 6'b000_010
+`define Game_Meat_box 6'b000_011
+`define Game_Salt_box 6'b000_100
+`define Game_Berry_box 6'b000_101
+`define Game_Chili_box 6'b000_110
+
+//-----tables-----
+`define Game_Table_1 6'b001_001
+`define Game_Table_2 6'b001_011
+`define Game_Table_3 6'b001_110
+`define Game_Table_4 6'b010_001
+`define Game_Table_5 6'b010_011
+
+//-----trash bin-----
+`define Game_Trash_bin 6'b010_100
+
+//-----peocess machines-----
+`define Game_Stone_Mill 6'b000_111 //manual
+`define Game_Cutting_Machine 6'b001_000 //automatic
+
+//-----combine machines-----
+`define Game_Workbench 6'b001_111 //manual
+`define Game_Mixer 6'b010_000 //automatic
+
+//-----cooking machines-----
+`define Game_Stove 6'b001_010 //fully automatic
+`define Game_Oven_1 6'b001_100
+`define Game_Oven_2 6'b001_101
+
+
+`define Game_Customer 6'b010_010
+
+
 //---------------Script Encode---------------
