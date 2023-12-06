@@ -24,7 +24,23 @@
 module OperationEncoder(
 input [4:0] button,
 input enable,
-output [7:0] tx,
-output activation
+output reg [7:0] tx,
+output reg activation
     );
+always @* begin
+    if (enable) begin
+        activation <= 1'b1;
+        casex(button)
+            5'bxxxx0 : tx <= 8'b0000110;
+            5'bxxx0x : tx <= 8'b0001010;
+            5'bxx0xx : tx <= 8'b0010010;
+            5'bx0xxx : tx <= 8'b0100010;
+            5'b0xxxx : tx <= 8'b1000010;
+            default : tx <= 8'b0000010; 
+        endcase
+    end else begin 
+        tx <= 8'b0000010;
+        activation <= 1'b0;
+    end
+end
 endmodule
