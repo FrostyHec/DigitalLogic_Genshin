@@ -22,6 +22,13 @@
 
 
 module GameStateEncoder(
+
+input switch_start, //这个是上升沿开始，下降沿结束
+input enable,
+output [7:0] tx,
+output activation
+    );
+
 input clk,
 input switch_start,
 input enable,
@@ -41,4 +48,5 @@ always @(posedge clk) begin
         tx <= 8'b00000001;
     end
 end
+
 endmodule
