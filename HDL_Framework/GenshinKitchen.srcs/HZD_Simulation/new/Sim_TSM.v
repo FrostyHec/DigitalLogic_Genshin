@@ -27,22 +27,30 @@ module Sim_TSM(
     reg [5:0] state;
     wire [5:0] next_state;
     wire activation;
-    TargetStateMachine tsm(.button(button),.btn_en(btn_en),.state(state)
+    reg clk;
+    TargetStateMachine tsm(.button(button),.btn_en(btn_en),.state(state),.clk(clk)
     ,.next_state(next_state),.activation(activation));
+    initial begin
+        clk=1'b0;
+        forever begin
+            #5 clk=~clk;
+        end
+    end
     initial begin
         button=2'b10;
         state=6'b000_001;
         btn_en=1'b1;
-        repeat(25) begin
-            #5 button=2'b00;
-            #5 button=2'b10;
+        //repeat(25) begin
+            #10 button=2'b00;
+            #15 button=2'b10;
             state=next_state;
-        end
-        repeat(25) begin
-            #5 button=2'b00;
-            #5 button=2'b01;
-            state=next_state;
-        end
+        // end
+        // repeat(25) begin
+        //     #10 button=2'b00;
+        //     #10 button=2'b01;
+        //     state=next_state;
+        // end
+        #50
         $finish;
     end
 endmodule

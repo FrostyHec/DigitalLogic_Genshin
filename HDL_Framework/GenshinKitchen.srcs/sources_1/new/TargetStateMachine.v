@@ -1,3 +1,4 @@
+
 `include "ConstValue.vh"
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
@@ -24,13 +25,19 @@
 module TargetStateMachine(
 input [1:0] button,
 input btn_en,
+input clk,
 input [5:0] state,
 output reg [5:0] next_state,
 output reg activation
     );
+    reg [1:0] prev_button;
+    always @(posedge clk) begin
+        if(prev_button==button) activation<=1'b0;
+        prev_button<=button;
+    end
     always @(button) begin
         activation=1'b0;
-        if(btn_en) begin
+        if(btn_en) begin //enable
             if(button[`Encoder_Btn_TargetUp]) begin
                 next_state=state+1;
                 activation=1'b1; 

@@ -1,3 +1,4 @@
+
 `include "ConstValue.vh"
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
@@ -22,6 +23,12 @@
 
 
 module ManualTop(
-
+input [7:0] switches,
+input [6:0] button,
+output [7:0] led,
+input clk,
+input rx,
+output tx
     );
+    
 endmodule
