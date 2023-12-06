@@ -1,12 +1,12 @@
 module clock(
     input clk,rst,
-    output reg clk_9600,
+    output reg out,
 );
 parameter period = 16;
 reg [4:0] cnt;
-always @(posedge clk, negedge rsn)
+always @(posedge clk, negedge rst)
     begin
-        if(!rsn) begin
+        if(!rst) begin
             cnt <= 0;
             out <= 0;
         end
