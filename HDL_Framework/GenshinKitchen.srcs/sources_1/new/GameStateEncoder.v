@@ -22,9 +22,31 @@
 
 
 module GameStateEncoder(
+
 input switch_start, //这个是上升沿开始，下降沿结束
 input enable,
 output [7:0] tx,
 output activation
     );
+
+input clk,
+input switch_start,
+input enable,
+output reg [7:0] tx,
+output reg activation
+    );
+reg pre_switch = 1'b0;
+always @(posedge clk) begin
+    if (enable) begin
+        activation <= 1'b1;
+        if (pre_switch != switch_start) begin
+            if (switch_start) tx <= 8'b00000101;
+            else tx <= 8'b00001001;
+        end
+    end else begin 
+        activation <= 1'b0;
+        tx <= 8'b00000001;
+    end
+end
+
 endmodule
