@@ -24,9 +24,6 @@
 module OperationEncoder(
 input [4:0] button,
 input enable,
-output [7:0] tx,
-output activation
-    );
 output reg [7:0] tx,
 output reg activation
     );
