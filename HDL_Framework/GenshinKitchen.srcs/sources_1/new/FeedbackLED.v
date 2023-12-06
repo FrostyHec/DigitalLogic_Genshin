@@ -25,4 +25,15 @@ input [7:0] feedback,
 input enable,
 output [7:0] LED
     );
+    always @(*)
+    begin
+        if(enable)
+        begin
+            LED = feedback;
+        end
+        else
+        begin
+            LED = 8'b00000000;
+        end
+    end
 endmodule
