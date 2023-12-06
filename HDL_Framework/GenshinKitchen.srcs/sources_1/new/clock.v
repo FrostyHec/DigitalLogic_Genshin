@@ -2,8 +2,8 @@ module clock(
     input clk,rst,
     output reg out,
 );
-parameter period = 16;
-reg [4:0] cnt;
+parameter period = 651;
+reg [31:0] cnt;
 always @(posedge clk, negedge rst)
     begin
         if(!rst) begin
