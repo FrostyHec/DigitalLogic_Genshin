@@ -93,5 +93,3 @@
 
 `define Game_Customer 6'b010_010
 
-
-//---------------Script Encode---------------

@@ -31,7 +31,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="42"/>
+    <Option Name="WTXSimLaunchSim" Val="47"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -198,6 +198,7 @@
       </Config>
     </FileSet>
     <FileSet Name="HZD_Simulation" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/HZD_Simulation">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/HZD_Simulation/new/Sim_TSM.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
