@@ -21,6 +21,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+//用于检测是否合法，可以检测：
+//1.操作合法性
+//2.编码合法性（one-hot）
+//3.target machine合法性
 module ManualFliter(
 input [7:0] prev_tx,feedback,
 input [5:0] target_machine,
