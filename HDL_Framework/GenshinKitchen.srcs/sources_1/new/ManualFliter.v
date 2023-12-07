@@ -26,6 +26,12 @@ input [7:0] prev_tx,feedback,
 input [5:0] target_machine,
 output reg [7:0] tx
     );
+    parameter get = 2;
+    parameter put = 3;
+    parameter interact = 4;
+    parameter move = 5;
+    parameter throw = 6;
+
     wire[1:0] feedback_channel = feedback[1:0];
     wire[1:0] prev_tx_channel = prev_tx[1:0];
     wire throwable,istable;
@@ -77,7 +83,7 @@ output reg [7:0] tx
             end
 
             // ensure that the operation signal is One Hot encoded
-            else if(prev_tx[6] + prev_tx[5] + prev_tx[4] + prev_tx[3] + prev_tx[2] == 1) begin
+            else if(prev_tx[get] + prev_tx[put] + prev_tx[interact] + prev_tx[move] + prev_tx[throw] == 1) begin
                 tx=prev_tx;
             end
             else begin
