@@ -1,6 +1,6 @@
-module clock(
+module DelayClock(
     input clk,rst,
-    output reg out,
+    output reg out
 );
 parameter period = 651;
 reg [31:0] cnt;

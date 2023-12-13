@@ -1,13 +1,12 @@
-
-`include "ConstValue.vh"
+`include "../ConstValue.vh"
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/12/02 22:16:05
+// Create Date: 2023/12/02 23:01:17
 // Design Name: 
-// Module Name: ManualFliter
+// Module Name: TargetRegister
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -22,15 +21,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ManualTop(
-input [7:0] switches,
-input [6:0] button,
-output [7:0] led,
-input clk,
-input rx,
-output tx
+module TargetRegister(
+input [5:0] next_state,
+input next_state_activation,
+output reg [5:0] state  
     );
-    wire [4:0] b=switches[4:0];
-    wire w;
-    OperationEncoder c(.button(b),.enable(1'b1),.tx(tx),.activation(w));
+    always @(posedge next_state_activation) begin
+        state<=next_state;
+    end
 endmodule

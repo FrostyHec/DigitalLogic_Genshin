@@ -1,5 +1,5 @@
 
-`include "ConstValue.vh"
+`include "../ConstValue.vh"
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -53,7 +53,7 @@ output reg activation
         end
     end
     always @(posedge clk) begin
-        if(prev_in==in||in==no_press) activation<=1'b0;
-        else activation<=1'b1;
+        if(prev_in==in||in==no_press) activation=1'b0;
+        else activation=1'b1;
     end
 endmodule
