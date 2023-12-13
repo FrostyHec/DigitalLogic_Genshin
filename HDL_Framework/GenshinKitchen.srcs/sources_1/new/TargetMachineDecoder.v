@@ -20,7 +20,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//用于判断target machine 的种类的
+//其中，throwable 为1’b1 是桌子和垃圾桶， istable 为 1’b1 是桌子
 module TargetMachineThrowable(
 input [5:0] target_machine,
 output reg throwable,
