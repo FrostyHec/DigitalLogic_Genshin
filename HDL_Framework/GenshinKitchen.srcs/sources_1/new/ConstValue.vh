@@ -18,8 +18,9 @@
 `define Out_LED_MachineHasItem 3
 
 //-----Encoder-----
-`define Encoder_Btn_TargetUp 1
-`define Encoder_Btn_TargetDown 0
+// `define Encoder_Btn_TargetUp 1
+// `define Encoder_Btn_TargetDown 0
+// `define Encoder_btn
 
 
 //---------------URAT Communication Protocol---------------
@@ -92,4 +93,3 @@
 
 
 `define Game_Customer 6'b010_010
-
