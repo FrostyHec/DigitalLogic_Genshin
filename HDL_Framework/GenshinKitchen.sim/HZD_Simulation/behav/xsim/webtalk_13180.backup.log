@@ -2,11 +2,12 @@
 # Webtalk v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun Dec  3 17:51:13 2023
-# Process ID: 33344
+# Start of session at: Thu Dec  7 00:48:09 2023
+# Process ID: 13180
 # Current directory: D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim
-# Command line: wbtcv.exe -mode batch -source D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/Sim_TSE_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/Sim_TSM_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/webtalk.log
 # Journal file: D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/Sim_TSE_behav/webtalk/xsim_webtalk.tcl -notrace
+source D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/Sim_TSM_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec  7 00:48:10 2023...

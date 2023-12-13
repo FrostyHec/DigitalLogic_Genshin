@@ -23,10 +23,9 @@
 module FeedbackLED(
 input [7:0] feedback,
 input enable,
-output [7:0] LED
+output reg [7:0] LED
     );
-    always @(*)
-    begin
+    always @(*) begin
         if(enable)
         begin
             LED = feedback;

@@ -30,5 +30,7 @@ input clk,
 input rx,
 output tx
     );
-    
+    wire [4:0] b=switches[4:0];
+    wire w;
+    OperationEncoder c(.button(b),.enable(1'b1),.tx(tx),.activation(w));
 endmodule

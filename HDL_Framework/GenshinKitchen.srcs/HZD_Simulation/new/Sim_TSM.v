@@ -28,7 +28,7 @@ module Sim_TSM(
     wire [5:0] next_state;
     wire activation;
     reg clk;
-    TargetStateMachine tsm(.button(button),.btn_en(btn_en),.state(state),.clk(clk)
+    TargetStateMachine tsm(.in(button),.en(btn_en),.state(state),.clk(clk)
     ,.next_state(next_state),.activation(activation));
     initial begin
         clk=1'b0;

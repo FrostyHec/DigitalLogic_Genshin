@@ -23,27 +23,27 @@
 
 
 module TargetStateMachine(
-input [1:0] button,
-input btn_en,
+input [1:0] in,
+input en,
 input clk,
 input [5:0] state,
 output reg [5:0] next_state,
 output reg activation
     );
-    reg [1:0] prev_button;
-    always @(posedge clk) begin
-        if(prev_button==button) activation<=1'b0;
-        prev_button<=button;
+    parameter no_press = 2'b00;
+    parameter target_up =1;
+    parameter target_down=0;
+
+    reg [1:0] prev_in;
+    always @(posedge clk) begin//reg
+        prev_in<=in;
     end
-    always @(button) begin
-        activation=1'b0;
-        if(btn_en) begin //enable
-            if(button[`Encoder_Btn_TargetUp]) begin
+    always @(in) begin
+        if(en&&in!=no_press) begin //enable
+            if(in[target_up]) begin
                 next_state=state+1;
-                activation=1'b1; 
-            end else if(button[`Encoder_Btn_TargetDown]) begin
+            end else if(in[target_down]) begin
                 next_state=state-1;
-                activation=1'b1;
             end
             if(next_state>`Targeting_Max) begin
                 next_state=`Targeting_Initial; 
@@ -51,5 +51,9 @@ output reg activation
                 next_state=`Targeting_Max;
             end
         end
+    end
+    always @(posedge clk) begin
+        if(prev_in==in||in==no_press) activation<=1'b0;
+        else activation<=1'b1;
     end
 endmodule

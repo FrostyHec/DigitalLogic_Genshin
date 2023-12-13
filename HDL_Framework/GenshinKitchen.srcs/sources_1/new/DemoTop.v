@@ -31,6 +31,8 @@ module DemoTop(
     input rx,
     output tx
     );
+    assign led={7{1'b1}};
+    
 
 // The wire below is useful!
         wire uart_clk_16;
@@ -45,8 +47,10 @@ module DemoTop(
         wire [7:0] pc;
         wire [15:0] script;
 // The wire above is useful~
-        
 
+      //assign dataIn_bits= 8'b0000_0110;
+      //assign uart_clk_16=clk;
+      //ManualTop m(.switches(switches),.button(button),.led(led),.tx(dataIn_bits));
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
       .reset(0),           // please use the same reset as UART module
