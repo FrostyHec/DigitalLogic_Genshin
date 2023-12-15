@@ -32,10 +32,10 @@ always @* begin
         activation <= 1'b1;
         casex(button)
             5'bxxxx0 : tx <= 8'b0000_0110;
-            5'bxxx0x : tx <= 8'b0000_1010;
-            5'bxx0xx : tx <= 8'b0001_0010;
-            5'bx0xxx : tx <= 8'b0010_0010;
-            5'b0xxxx : tx <= 8'b0100_0010;
+            5'bxxx01 : tx <= 8'b0000_1010;
+            5'bxx011 : tx <= 8'b0001_0010;
+            5'bx0111 : tx <= 8'b0010_0010;
+            5'b01111 : tx <= 8'b0100_0010;
             default : tx <= 8'b0000_0010; 
         endcase
     end else begin 
