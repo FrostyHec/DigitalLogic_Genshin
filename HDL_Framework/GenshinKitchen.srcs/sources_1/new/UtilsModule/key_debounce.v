@@ -1,3 +1,10 @@
+`include "../ConstValue.vh"
+`timescale 1ns / 1ps
+
+
+//returns：
+//key_flag：当前时钟周期key_value是否发生改变
+//key_value：（消抖后）当前时钟周期下按键的值
 module key_debounce(
 input clk,
 input rst_n,
@@ -7,6 +14,7 @@ output reg key_value
 );
 //爬的网上的代码，自己稍微修改了一下
 
+//period可以更改，即为希望多少个周期判断一次，这里应该是100ms
 parameter period = 1000000;
 reg [31:0] delay_cnt;
 reg key_reg;
