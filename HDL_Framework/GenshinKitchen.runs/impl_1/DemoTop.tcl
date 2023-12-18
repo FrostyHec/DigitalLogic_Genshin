@@ -60,6 +60,8 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -73,9 +75,8 @@ set rc [catch {
   set_property parent.project_path D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.xpr [current_project]
   set_property ip_output_repo D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.dcp
-  read_ip -quiet D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram.xci
+  add_files -quiet D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/inst_ram_synth_1/inst_ram.dcp
   read_xdc D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc
   link_design -top DemoTop -part xc7a35tcsg324-1
   close_msg_db -file init_design.pb
@@ -153,7 +154,6 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force DemoTop.mmi }
   write_bitstream -force DemoTop.bit 
   catch {write_debug_probes -quiet -force DemoTop}

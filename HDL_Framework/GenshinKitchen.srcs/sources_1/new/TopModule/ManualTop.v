@@ -24,13 +24,52 @@
 
 module ManualTop(
 input [7:0] switches,
-input [6:0] button,
-output [7:0] led,
+input [4:0] button,
 input clk,
-input rx,
-output tx
+input [7:0] rx,
+
+input available_for_next,
+input [5:0] state,
+
+output reg[7:0] tx,
+output reg [7:0] led,led2,
+output reg[5:0] new_state,
+output reg new_state_activation
     );
-    wire [4:0] b=switches[4:0];
-    wire w;
-    OperationEncoder c(.button(b),.enable(1'b1),.tx(tx),.activation(w));
+    reg prev_send;
+    wire [5:0] tsm_next_state;
+    wire [7:0] tse_tx;
+    wire state_change_active,available_for_encoder;
+    TargetStateMachine tsm(
+        .in({switches[`In_Switch_TargetUp],switches[`In_Switch_TargetDown]}),
+        .en(1'b1),
+        .clk(clk),
+        .state(state),
+        .next_state(tsm_next_state),
+        .activation(available_for_encoder)
+        );
+    TargetStateEncoder tse(
+        .state(tsm_next_state),
+        .input_activate(available_for_encoder),
+        .tx(tse_tx),
+        .activation(state_change_active)
+    );
+
+    always @(posedge clk) begin
+        if(available_for_next) begin
+            if(state_change_active) begin
+                new_state<=tsm_next_state;
+                new_state_activation<=1'b1;
+            end else begin
+                new_state_activation<=1'b0;
+            end
+            if(state_change_active) begin
+                tx<=tse_tx;
+                prev_send<=1'b1;
+            end 
+            // else begin
+            //     tx<={`Sender_Data_Ignore,`Sender_Channel_Ignore};
+            // end
+        end
+    end
 endmodule

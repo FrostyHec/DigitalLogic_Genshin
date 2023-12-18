@@ -1,24 +1,15 @@
 module DelayClock(
-    input clk,rst,
-    output reg out
+    input clk,
+    output reg out=1'b0
 );
-parameter period = 651;
-reg [31:0] cnt;
-always @(posedge clk, negedge rst)
-    begin
-        if(!rst) begin
-            cnt <= 0;
-            out <= 0;
-        end
-        else begin 
-            if(cnt == (period >> 1) - 1)
-            begin 
-                out <= ~out;
-                cnt <= 0;
-            end
-            else 
-            cnt <= cnt + 1;
-        end
+reg[31:0] counter=0;
+always @(posedge clk) begin
+    if (counter >= 325) begin//650 slow for 651 try 16 or 256
+        counter <= 0;
+        out <= ~out;
+    end else begin
+        counter <= counter + 1;
     end
+end
 
 endmodule
