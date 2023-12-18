@@ -29,10 +29,9 @@ module DemoTop(
     
     input clk,
     input rx,
+    input rst_n,//used in clock, maybe more usage in other tops in future
     output tx
     );
-    assign led={7{1'b1}};
-    
 
 // The wire below is useful!
         wire uart_clk_16;
@@ -48,9 +47,6 @@ module DemoTop(
         wire [15:0] script;
 // The wire above is useful~
 
-      //assign dataIn_bits= 8'b0000_0110;
-      //assign uart_clk_16=clk;
-      //ManualTop m(.switches(switches),.button(button),.led(led),.tx(dataIn_bits));
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
       .reset(0),           // please use the same reset as UART module
@@ -79,5 +75,26 @@ module DemoTop(
           .io_dataOut_valid(dataOut_valid)  // referring (b)
         );
 
+    //assign uart_clk_16=clk;
+    DelayClock c(.clk(clk),.out(uart_clk_16));
+
+    DesignedTop dst(
+    .origin_clk(clk),
+    .clk(uart_clk_16),
+    .button(button),
+    .switches(switches),
+    .led(led),
+    .led2(led2),
+
+    .dataOut_bits(dataOut_bits),
+    .dataOut_valid(dataOut_valid),
+    
+    .script_mode(script_mode),
+    .pc(pc),
+    .script(script),    
+    
+    .dataIn_bits(dataIn_bits),
+    .dataIn_ready(dataIn_ready)
+    );
 endmodule
 

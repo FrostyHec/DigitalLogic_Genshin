@@ -1,15 +1,20 @@
 //---------------IO Index---------------
 //这些可能要改动的
 //-----Input-----
-`define Inp_Switch_Start 0
+//表示[7:0]的位宽中哪一位是用来干嘛的，
+//比如我要拿state状态时，我就写switches[`In_Switch_state]即可
+`define In_Switch_State 0
+`define In_Switch_TargetUp 0
+`define In_Switch_TargetDown 1
+
 
 `define In_Button_Get 0
 `define In_Button_Put 1
 `define In_Button_Interact 2
 `define In_Button_Move 3
 `define In_Button_Throw 4
-`define In_Button_TargetUp 5
-`define In_Button_TargetDown 6
+
+
 
 //-----Output-----
 `define Out_LED_InfrontTargetMachine 0

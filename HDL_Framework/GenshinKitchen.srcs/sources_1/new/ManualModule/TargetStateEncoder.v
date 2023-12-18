@@ -28,7 +28,7 @@ output reg [7:0] tx,
 output reg activation
     );
     reg [5:0] sender_data;
-    reg[1:0] sender_channel;  
+    reg [1:0] sender_channel;  
     always @(input_activate) begin
         if(input_activate) begin
             sender_data=state;
