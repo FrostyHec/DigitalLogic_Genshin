@@ -13,7 +13,7 @@ reg [7:0] i;
 always @(posedge clk)
 begin
     isFinished <= 1'b0;
-    if(cnt == (parameter >> 1) - 1)
+    if(cnt == (period >> 1) - 1)
     begin 
         if(i == 8'd0)
         begin
@@ -25,7 +25,9 @@ begin
         cnt <= 0;
     end
     else 
-    cnt <= cnt + 1;
+    begin
+        cnt <= cnt + 1;
+    end
 end
 
 
