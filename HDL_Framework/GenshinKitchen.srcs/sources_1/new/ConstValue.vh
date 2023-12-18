@@ -3,9 +3,9 @@
 //-----Input-----
 //表示[7:0]的位宽中哪一位是用来干嘛的，
 //比如我要拿state状态时，我就写switches[`In_Switch_state]即可
-`define In_Switch_State 0
-`define In_Switch_TargetUp 0
-`define In_Switch_TargetDown 1
+`define In_Switch_GameState 0
+`define In_Switch_TargetUp 6
+`define In_Switch_TargetDown 7
 
 
 `define In_Button_Get 0
