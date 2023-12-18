@@ -20,13 +20,23 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//我希望它的功能是，当我给它传入一个新的state后，它把这个新的state赋给旧的
 module TargetRegister(
 input [5:0] next_state,
 input next_state_activation,
-output reg [5:0] state  
+input clk,
+input rst_n,
+output reg [5:0] state =`Targeting_Initial
     );
-    always @(posedge next_state_activation) begin
-        state<=next_state;
+    always @(posedge clk) begin
+        if(~rst_n) begin
+            state <=`Targeting_Initial;
+        end else if(next_state_activation) begin
+            state <=next_state;
+        end
     end
+    // always @(posedge next_state) begin
+    //     state<=next_state;
+    // end
 endmodule
+

@@ -1,4 +1,3 @@
-
 `include "../ConstValue.vh"
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
@@ -35,7 +34,9 @@ output reg activation
     parameter target_down=0;
 
     reg [1:0] prev_in;
-    always @(posedge clk) begin//reg
+    always @(posedge clk) begin//reg //考虑是不是可以删掉啊
+        if(prev_in==in||in==no_press) activation<=1'b0;
+        else activation<=1'b1;
         prev_in<=in;
     end
     always @(in) begin
@@ -51,9 +52,5 @@ output reg activation
                 next_state=`Targeting_Max;
             end
         end
-    end
-    always @(posedge clk) begin
-        if(prev_in==in||in==no_press) activation=1'b0;
-        else activation=1'b1;
     end
 endmodule
