@@ -38,8 +38,8 @@ output reg new_state_activation
     );
     reg prev_send;
     wire [5:0] tsm_next_state;
-    wire [7:0] tse_tx;
-    wire state_change_active,available_for_encoder;
+    wire [7:0] tse_tx,gs_tx;
+    wire state_change_active,available_for_encoder,gamestate_activated;
     TargetStateMachine tsm(
         .in({switches[`In_Switch_TargetUp],switches[`In_Switch_TargetDown]}),
         .en(1'b1),
@@ -54,7 +54,16 @@ output reg new_state_activation
         .tx(tse_tx),
         .activation(state_change_active)
     );
+    GameStateEncoder gs(
+        .clk(clk),
+        .switch_start(switches[`In_Switch_GameState]),
+        .enable(1'b1),
+        .tx(gs_tx),
+        .activation(gamestate_activated)
+    );
+    OperationEncoder op(
 
+    );
     always @(posedge clk) begin
         if(available_for_next) begin
             if(state_change_active) begin
@@ -66,7 +75,10 @@ output reg new_state_activation
             if(state_change_active) begin
                 tx<=tse_tx;
                 prev_send<=1'b1;
-            end 
+            end  else if(gamestate_activated) begin
+                tx<=gs_tx;
+                prev_send<=1'b1;
+            end
             // else begin
             //     tx<={`Sender_Data_Ignore,`Sender_Channel_Ignore};
             // end
