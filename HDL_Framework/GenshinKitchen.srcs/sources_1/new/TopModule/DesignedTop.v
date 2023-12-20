@@ -13,11 +13,11 @@ module DesignedTop(
     input dataOut_valid,
     
     input script_mode,
-    input [7:0] pc,
+    output [7:0] pc,
     input [15:0] script,    
     
     output reg [7:0] dataIn_bits,
-    input dataIn_ready,
+    input dataIn_ready,//unused
     
     //fortest
     output [5:0] next_state,current_state,
@@ -30,6 +30,7 @@ module DesignedTop(
     reg [7:0] next_out;
     //wire [5:0] next_state,current_state;
     assign module_rx=next_out;
+    reg dataIn_ready_rg=1'b1;
 
     ManualTop mt(
       .switches(switches),

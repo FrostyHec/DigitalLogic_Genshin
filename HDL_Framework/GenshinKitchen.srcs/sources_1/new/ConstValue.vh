@@ -7,7 +7,7 @@
 `define In_Switch_GameEnd 1
 `define In_Switch_TargetUp 6
 `define In_Switch_TargetDown 7
-
+`define In_Switch_StepMode 7
 
 `define In_Button_Get 0
 `define In_Button_Put 1

@@ -71,11 +71,13 @@ output reg new_state_activation
     reg [7:0] prev_tx,ftx;
     ManualFliter mf(
         .prev_tx(ftx),
-        .feedback(8'b0000_0101),//does rx has any bugs???????
+        .feedback(rx),//does rx has any bugs???????
         .target_machine(state),
         .tx(tx)
     );
+    //assign tx=ftx;
     assign led=tx;
+    reg [10:0] prev_op_activated;
     always @(posedge clk) begin
         if(available_for_next) begin
             if(state_change_active) begin
@@ -84,10 +86,15 @@ output reg new_state_activation
             end else begin
                 new_state_activation<=1'b0;
             end
+
             if(operation_activated) begin
                 ftx<=oe_tx;
                 prev_send<=1'b1;
-            end 
+                prev_op_activated<=6'b000_001;
+            end else if(prev_op_activated&~operation_activated) begin //modify interact
+                ftx<=oe_tx;
+                prev_op_activated<=prev_op_activated+1;
+            end
             else if(state_change_active) begin
                 ftx<=tse_tx;
                 prev_tx<=tse_tx;
