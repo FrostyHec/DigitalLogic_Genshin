@@ -54,14 +54,14 @@ output reg [7:0] tx
         if(feedback_channel == `Receiver_Channel_FeedBack) begin
             
             //prevent illegal interaction while moving
-            if((feedback[`Receiver_Feedback_InfrontTargetMachine] | prev_tx[throw] | prev_tx[move]) == 1'b0) begin
+            if(~feedback[`Receiver_Feedback_InfrontTargetMachine] && ~prev_tx[throw] && ~prev_tx[move]) begin
                 tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
             end 
 
             //prevent unreasonable access to item interactions
             // get
             else if(operation == `Sender_Operation_Get) begin
-                if(feedback[`Receiver_Feedback_MachineHasItem] == 1'b1 && feedback[`Receiver_Feedback_HasItemInHand] == 1'b0) begin
+                if(feedback[`Receiver_Feedback_MachineHasItem] && ~feedback[`Receiver_Feedback_HasItemInHand]) begin
                     tx=prev_tx;
                 end
                 else begin
@@ -70,7 +70,7 @@ output reg [7:0] tx
             end 
             // put
             else if(operation == `Sender_Operation_Put) begin
-                if((~istable & ~feedback[`Receiver_Feedback_MachineHasItem] & feedback[`Receiver_Feedback_HasItemInHand]) == 1'b1) begin
+                if (~istable && ~feedback[`Receiver_Feedback_MachineHasItem] && feedback[`Receiver_Feedback_HasItemInHand]) begin
                     tx=prev_tx;
                 end
                 else begin
@@ -80,7 +80,7 @@ output reg [7:0] tx
 
             // prevent unreasonable throwing of ingredients
             else if(operation == `Sender_Operation_Throw) begin
-                if(throwable == 1'b0) begin
+                if(~throwable) begin
                     tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
                 end
                 else begin
@@ -101,7 +101,7 @@ output reg [7:0] tx
         end
     end else if(prev_tx_channel == `Sender_Channel_TargetMachineChanged) begin
         // prevent illeagal target machine
-        if(target_machine_prex > 20) begin 
+        if(target_machine_prex > `max_target_number) begin 
             tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
         end else begin
             tx=prev_tx;
