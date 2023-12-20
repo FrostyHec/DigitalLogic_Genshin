@@ -1,0 +1,110 @@
+#分别做了三道菜，尽量快
+#如果三道菜一起做应该可以更快
+
+game start
+
+#香嫩椒椒鸡
+get 6
+put 7
+interact 7
+waituntil target_ready
+get 7
+throw 11
+get 6
+throw 11
+get 3
+
+#这里不知道会不会变成黑暗料理，毕竟太快了
+put 10
+get 11
+put 10
+get 11
+put 10
+interact 10
+waituntil target_ready
+get 10
+put 18
+
+#如果上面那个用不了的话，就只能用下面这个了
+#put 12
+#get 11
+#put 12
+#get 11
+#put 12
+#interact 12
+#waituntil target_ready
+#get 12
+#put 18
+
+
+#树莓水馒头
+get 1
+put 8
+interact 8
+get 2
+put 7
+interact 7
+waituntil target_ready
+get 7
+throw 11
+get 5
+throw 11
+get 8
+
+#这里不知道会不会变成黑暗料理，毕竟太快了
+put 10
+get 11
+put 10
+get 11
+put 10
+interact 10
+waituntil target_ready
+get 10
+put 18
+#如果上面那个用不了的话，就只能用下面这个了
+#put 12
+#get 11
+#put 12
+#get 11
+#put 12
+#interact 12
+#waituntil target_ready
+#get 12
+#put 18
+
+
+#冷肉拼盘
+get 6
+put 7
+interact 7
+waituntil target_ready
+get 7
+throw 17
+
+get 2
+put 8
+interact 8
+get 4
+throw 17
+get 8
+put 16
+get 17
+put 16
+get 17
+put 16
+interact 16
+
+get 3
+put 8
+interact 8
+get 16
+put 10
+get 8
+put 10
+interact 10
+waituntil target_ready
+get 10
+put 18
+
+
+game end

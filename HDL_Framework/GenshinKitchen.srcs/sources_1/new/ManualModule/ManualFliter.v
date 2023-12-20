@@ -95,7 +95,7 @@ output reg [7:0] tx
             end
 
         end else begin
-            tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
+            tx=prev_tx;
         end
     end else if(prev_tx_channel == `Sender_Channel_TargetMachineChanged) begin
         // prevent illeagal target machine(AB+ACD+ACE)
