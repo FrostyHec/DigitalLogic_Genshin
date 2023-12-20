@@ -39,6 +39,7 @@ output reg [7:0] tx
     wire[1:0] feedback_channel = feedback[1:0];
     wire[1:0] prev_tx_channel = prev_tx[1:0];
     wire throwable,istable;
+    wire condition1 = feedback[`Receiver_Feedback_InfrontTargetMachine] | prev_tx[6] | prev_tx[5];
     wire[5:0] target_machine_prex = prev_tx[7:2];
 
     TargetMachineThrowable target_machine_throwable(
@@ -53,7 +54,7 @@ output reg [7:0] tx
         if(feedback_channel == `Receiver_Channel_FeedBack) begin
             
             //prevent illegal interaction while moving
-            if(feedback[`Receiver_Feedback_InfrontTargetMachine] | prev_tx[6] | prev_tx[5] == 1'b0) begin
+            if(condition1 == 1'b0) begin
                 tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
             end 
 
