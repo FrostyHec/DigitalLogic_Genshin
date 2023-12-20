@@ -39,6 +39,7 @@ output reg [7:0] tx
     wire[1:0] feedback_channel = feedback[1:0];
     wire[1:0] prev_tx_channel = prev_tx[1:0];
     wire throwable,istable;
+    wire[5:0] target_machine_prex = prev_tx[7:2];
 
     TargetMachineThrowable target_machine_throwable(
         .target_machine(target_machine),
@@ -87,19 +88,19 @@ output reg [7:0] tx
             end
 
             // ensure that the operation signal is One Hot encoded
-            else if(prev_tx[get] + prev_tx[put] + prev_tx[interact] + prev_tx[move] + prev_tx[throw] == 1) begin
-                tx=prev_tx;
+            else if(prev_tx[get] + prev_tx[put] + prev_tx[interact] + prev_tx[move] + prev_tx[throw] != 1) begin
+                tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
             end
             else begin
-                tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
+                tx=prev_tx;
             end
 
         end else begin
             tx=prev_tx;
         end
     end else if(prev_tx_channel == `Sender_Channel_TargetMachineChanged) begin
-        // prevent illeagal target machine(AB+ACD+ACE)
-        if(prev_tx[7] | prev_tx[6] & (prev_tx[5] | prev_tx[4] & (prev_tx[3] | prev_tx[2])) == 1'b1) begin //到时候看看这里的判断要不要改一下
+        // prevent illeagal target machine
+        if(target_machine_prex > 20) begin 
             tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
         end else begin
             tx=prev_tx;
