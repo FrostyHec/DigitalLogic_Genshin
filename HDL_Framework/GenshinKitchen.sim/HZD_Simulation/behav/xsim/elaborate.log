@@ -9,6 +9,8 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.TargetStateMachine
 Compiling module xil_defaultlib.TargetStateEncoder
+Compiling module xil_defaultlib.GameStateEncoder
+Compiling module xil_defaultlib.OperationEncoder
 Compiling module xil_defaultlib.ManualTop
 Compiling module xil_defaultlib.TargetRegister
 Compiling module xil_defaultlib.DesignedTop

@@ -36,8 +36,12 @@ read_verilog D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/
 read_verilog -library xil_defaultlib {
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/ManualFliter.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/OperationEncoder.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetMachineDecoder.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/TargetRegister.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v
