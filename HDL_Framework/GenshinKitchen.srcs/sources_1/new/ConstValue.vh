@@ -3,7 +3,8 @@
 //-----Input-----
 //表示[7:0]的位宽中哪一位是用来干嘛的，
 //比如我要拿state状态时，我就写switches[`In_Switch_state]即可
-`define In_Switch_GameState 0
+`define In_Switch_GameStart 0
+`define In_Switch_GameEnd 1
 `define In_Switch_TargetUp 6
 `define In_Switch_TargetDown 7
 
@@ -98,3 +99,12 @@
 
 
 `define Game_Customer 6'b010_010
+
+//Endcoder
+`define oe_get 5'b000_01
+`define oe_put 5'b000_10
+`define oe_int 5'b001_00
+`define oe_mov 5'b010_00
+`define oe_thr 5'b100_00
+`define gst_st 2'b01
+`define gst_ed 2'b10

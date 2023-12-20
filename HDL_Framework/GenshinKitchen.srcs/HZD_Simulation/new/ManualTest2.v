@@ -34,11 +34,14 @@ module ManualTest2(
         rx=8'b0000_0000;
         current_state=8'b0000_0000;
         #10;
-        while (30) begin
-            switches[7]=1'b1;#100;
-            switches[7]=1'b0;#100;//应该输出信号
+        repeat(2) begin
+            switches[7]=1'b1;#20;
+            switches[7]=1'b0;#20;//应该输出信号
             current_state=next_state;
         end
+        #20 button=5'b000_01;
+        #20 button=5'b000_10;
+        #20
         $finish;
     end
 

@@ -31,15 +31,16 @@ input [7:0] rx,
 input available_for_next,
 input [5:0] state,
 
-output reg[7:0] tx,
-output reg [7:0] led,led2,
+output [7:0] tx,
+output [7:0] led,led2,
 output reg[5:0] new_state,
 output reg new_state_activation
     );
     reg prev_send;
     wire [5:0] tsm_next_state;
-    wire [7:0] tse_tx,gs_tx;
-    wire state_change_active,available_for_encoder,gamestate_activated;
+    wire [7:0] tse_tx,gs_tx,oe_tx;
+    wire state_change_active,available_for_encoder,gamestate_activated,
+    operation_activated;
     TargetStateMachine tsm(
         .in({switches[`In_Switch_TargetUp],switches[`In_Switch_TargetDown]}),
         .en(1'b1),
@@ -55,15 +56,26 @@ output reg new_state_activation
         .activation(state_change_active)
     );
     GameStateEncoder gs(
-        .clk(clk),
-        .switch_start(switches[`In_Switch_GameState]),
+        .in({switches[`In_Switch_GameEnd],switches[`In_Switch_GameStart]}),
         .enable(1'b1),
+        .clk(clk),
         .tx(gs_tx),
         .activation(gamestate_activated)
     );
     OperationEncoder op(
-
+        .button(button),
+        .enable(1'b1),
+        .tx(oe_tx),
+        .activation(operation_activated)
     );
+    reg [7:0] prev_tx,ftx;
+    ManualFliter mf(
+        .prev_tx(ftx),
+        .feedback(8'b0000_0101),//does rx has any bugs???????
+        .target_machine(state),
+        .tx(tx)
+    );
+    assign led=tx;
     always @(posedge clk) begin
         if(available_for_next) begin
             if(state_change_active) begin
@@ -72,16 +84,23 @@ output reg new_state_activation
             end else begin
                 new_state_activation<=1'b0;
             end
-            if(state_change_active) begin
-                tx<=tse_tx;
+            if(operation_activated) begin
+                ftx<=oe_tx;
                 prev_send<=1'b1;
-            end  else if(gamestate_activated) begin
-                tx<=gs_tx;
+            end 
+            else if(state_change_active) begin
+                ftx<=tse_tx;
+                prev_tx<=tse_tx;
                 prev_send<=1'b1;
-            end
-            // else begin
-            //     tx<={`Sender_Data_Ignore,`Sender_Channel_Ignore};
-            // end
+            end 
+            else if(gamestate_activated) begin
+                ftx<=gs_tx;
+                prev_tx<=gs_tx;
+                prev_send<=1'b1;
+            end 
+            else begin
+                ftx<=prev_tx;
+            end 
         end
     end
 endmodule

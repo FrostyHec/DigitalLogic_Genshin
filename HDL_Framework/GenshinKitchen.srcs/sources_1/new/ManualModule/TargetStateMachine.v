@@ -35,12 +35,16 @@ output reg activation
 
     reg [1:0] prev_in;
     always @(posedge clk) begin//reg //考虑是不是可以删掉啊
-        if(prev_in==in||in==no_press) activation<=1'b0;
-        else activation<=1'b1;
+        if(prev_in==in|in==no_press) begin
+            activation<=1'b0;
+        end
+        else begin 
+            activation<=1'b1;
+        end
         prev_in<=in;
     end
     always @(in) begin
-        if(en&&in!=no_press) begin //enable
+        if(en&in!=no_press) begin //enable
             if(in[target_up]) begin
                 next_state=state+1;
             end else if(in[target_down]) begin
