@@ -36,10 +36,10 @@ output reg [7:0] tx
     parameter move = 5;
     parameter throw = 6;
 
+    wire[5:0] operation = prev_tx[7:2];
     wire[1:0] feedback_channel = feedback[1:0];
     wire[1:0] prev_tx_channel = prev_tx[1:0];
     wire throwable,istable;
-    wire condition1 = feedback[`Receiver_Feedback_InfrontTargetMachine] | prev_tx[6] | prev_tx[5];
     wire[5:0] target_machine_prex = prev_tx[7:2];
 
     TargetMachineThrowable target_machine_throwable(
@@ -54,14 +54,14 @@ output reg [7:0] tx
         if(feedback_channel == `Receiver_Channel_FeedBack) begin
             
             //prevent illegal interaction while moving
-            if(condition1 == 1'b0) begin
+            if((feedback[`Receiver_Feedback_InfrontTargetMachine] | prev_tx[throw] | prev_tx[move]) == 1'b0) begin
                 tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
             end 
 
             //prevent unreasonable access to item interactions
             // get
-            else if(prev_tx[7:2] == `Sender_Operation_Get) begin
-                if(feedback[`Receiver_Feedback_MachineHasItem] == 1'b1) begin
+            else if(operation == `Sender_Operation_Get) begin
+                if(feedback[`Receiver_Feedback_MachineHasItem] == 1'b1 && feedback[`Receiver_Feedback_HasItemInHand] == 1'b0) begin
                     tx=prev_tx;
                 end
                 else begin
@@ -69,8 +69,8 @@ output reg [7:0] tx
                 end
             end 
             // put
-            else if(prev_tx[7:2] == `Sender_Operation_Put) begin
-                if(~istable & ~feedback[`Receiver_Feedback_MachineHasItem] & feedback[`Receiver_Feedback_HasItemInHand] == 1'b1) begin
+            else if(operation == `Sender_Operation_Put) begin
+                if((~istable & ~feedback[`Receiver_Feedback_MachineHasItem] & feedback[`Receiver_Feedback_HasItemInHand]) == 1'b1) begin
                     tx=prev_tx;
                 end
                 else begin
@@ -79,7 +79,7 @@ output reg [7:0] tx
             end
 
             // prevent unreasonable throwing of ingredients
-            else if(prev_tx[7:2] == `Sender_Operation_Throw) begin
+            else if(operation == `Sender_Operation_Throw) begin
                 if(throwable == 1'b0) begin
                     tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
                 end
@@ -89,7 +89,7 @@ output reg [7:0] tx
             end
 
             // ensure that the operation signal is One Hot encoded
-            else if(prev_tx[get] + prev_tx[put] + prev_tx[interact] + prev_tx[move] + prev_tx[throw] != 1) begin
+            else if((prev_tx[get] + prev_tx[put] + prev_tx[interact] + prev_tx[move] + prev_tx[throw]) != 1) begin
                 tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
             end
             else begin
