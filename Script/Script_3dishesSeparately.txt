@@ -23,12 +23,12 @@ interact 10
 waituntil target_ready
 get 10
 put 18
-#game end
+game end
 
 
 
 #树莓水馒头
-#game start
+game start
 get 1
 put 8
 interact 8
@@ -51,11 +51,11 @@ interact 10
 waituntil target_ready
 get 10
 put 18
-#game end
+game end
 
 
 #冷肉拼盘
-#game start
+game start
 
 get 6
 put 7
