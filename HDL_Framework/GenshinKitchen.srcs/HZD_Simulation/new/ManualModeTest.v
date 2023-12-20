@@ -34,10 +34,19 @@ module ManualModeTest(
         switches=8'b0000_0000;
         dataOut_bits=8'b0000_0000;
         dataOut_valid=1'b1;
-        while (30) begin
-            switches[7]=1'b1;#100;
-            switches[7]=1'b0;#100;//应该输出信号
+        repeat(2) begin
+            switches[7]=1'b1;#20;
+            switches[7]=1'b0;#20;//应该输出信号
         end
+        #20 button=5'b000_01;
+        #20 button=5'b000_10;
+        repeat(2) begin
+            switches[7]=1'b1;#20;
+            switches[7]=1'b0;#20;//应该输出信号
+        end
+        #20 switches[0]=1'b1;
+        #20 switches[0]=1'b0;
+        #20;
         $finish;
     end
 endmodule

@@ -53,7 +53,7 @@ module DesignedTop(
       .state(current_state)
     );
 
-    assign io_dataIn_bits=switches;
+    //assign io_dataIn_bits=switches;
     always @(posedge clk) begin//output
       if(script_mode) begin
         //script module. 注意wait模块传入一个真实时钟
@@ -62,7 +62,8 @@ module DesignedTop(
         dataIn_bits<=manual_tx;
       end
     end
-
+    //assign led2=next_out;
+    //assign led[7]=dataOut_valid;
     always @(dataOut_valid) begin//input
       if(dataOut_valid) begin
         next_out=dataOut_bits;//可能需要改（校验数据合法性）

@@ -22,23 +22,30 @@
 
 
 module GameStateEncoder(
-input clk,
-input switch_start,
+input [1:0] in,
 input enable,
+input clk,
 output reg [7:0] tx,
 output reg activation
     );
-reg pre_switch = 1'b0;
+reg [7:0] prev_tx;
 always @(posedge clk) begin
-    if (enable) begin
-        activation <= 1'b1;
-        if (pre_switch != switch_start) begin
-            if (switch_start) tx <= 8'b00000101;
-            else tx <= 8'b00001001;
-        end
-    end else begin 
-        activation <= 1'b0;
-        tx <= 8'b00000001;
+    if(prev_tx==tx) begin
+        activation<=1'b0;
+    end else begin
+        activation<=1'b1;
+    end
+    prev_tx<=tx;
+end
+always @(in) begin
+    if(enable) begin
+        case (in)
+            `gst_st: tx={`Sender_GameState_Start,`Sender_Channel_GameStateChanged};
+            `gst_ed: tx={`Sender_GameState_Stop,`Sender_Channel_GameStateChanged};
+            default: begin
+                tx={`Sender_Channel_Ignore,`Sender_Channel_Ignore};
+            end
+        endcase
     end
 end
 

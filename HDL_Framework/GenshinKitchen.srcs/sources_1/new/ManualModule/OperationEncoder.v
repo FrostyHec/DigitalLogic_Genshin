@@ -27,20 +27,23 @@ input enable,
 output reg [7:0] tx,
 output reg activation
     );
-always @* begin
+always @(button) begin
     if (enable) begin
-        activation <= 1'b1;
+        activation = 1'b1;
         casex(button)
-            5'bxxxx0 : tx <= 8'b0000_0110;
-            5'bxxx01 : tx <= 8'b0000_1010;
-            5'bxx011 : tx <= 8'b0001_0010;
-            5'bx0111 : tx <= 8'b0010_0010;
-            5'b01111 : tx <= 8'b0100_0010;
-            default : tx <= 8'b0000_0010; 
+            `oe_get: tx={`Sender_Operation_Get,`Sender_Channel_Operate};
+            `oe_put: tx={`Sender_Operation_Put,`Sender_Channel_Operate};
+            `oe_int: tx={`Sender_Operation_Interact,`Sender_Channel_Operate};
+            `oe_mov: tx={`Sender_Operation_Move,`Sender_Channel_Operate};
+            `oe_thr: tx={`Sender_Operation_Throw,`Sender_Channel_Operate};
+            default: begin 
+                tx={`Sender_Data_Ignore,`Sender_Channel_Ignore};
+                activation=1'b0;
+            end
         endcase
     end else begin 
-        tx <= 8'b0000_0010;
-        activation <= 1'b0;
+        tx = {`Sender_Data_Ignore,`Sender_Channel_Ignore};
+        activation = 1'b0;
     end
 end
 endmodule
