@@ -1,0 +1,15 @@
+jumpifn 2, player_hasitem
+throw 20
+get 8
+jumpifn 2, player_hasitem
+throw 20
+wait 20
+get 3
+put 8
+interact 8
+waituntil target_ready
+interact 8
+jumpif 2 target_ready
+waituntil target_ready
+get 8
+put 18
