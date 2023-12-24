@@ -1,0 +1,4 @@
+Running: xsim.dir/ASH_Test_behav/xsimk.exe -simmode gui -wdb ASH_Test_behav.wdb -simrunnum 0 -socket 8242
+Design successfully loaded
+Design Loading Memory Usage: 8276 KB (Peak: 8276 KB)
+Design Loading CPU Usage: 15 ms

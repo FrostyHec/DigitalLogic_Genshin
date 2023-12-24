@@ -51,7 +51,10 @@ output reg [7:0] tx
     always @*
     begin
     if(prev_tx_channel == `Sender_Channel_Operate) begin
-        if(feedback_channel == `Receiver_Channel_FeedBack) begin
+        if(prev_tx==8'b0000_0010) begin
+            tx=8'b0000_0010;
+        end
+        else if(feedback_channel == `Receiver_Channel_FeedBack) begin
             
             //prevent illegal interaction while moving
             if(~feedback[`Receiver_Feedback_InfrontTargetMachine] && ~prev_tx[throw] && ~prev_tx[move]) begin
