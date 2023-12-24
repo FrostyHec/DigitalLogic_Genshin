@@ -1,17 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module DesignedTop
-INFO: [VRFC 10-2458] undeclared symbol io_dataIn_bits, assumed default net type wire [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:56]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module GameStateEncoder
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ManualTop
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/OperationEncoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module OperationEncoder
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/TargetRegister.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TargetRegister
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TargetStateEncoder
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TargetStateMachine
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/HZD_Simulation/new/ManualModeTest.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ManualModeTest
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ActionScriptHandler
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/HZD_Simulation/new/ASH_Test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ASH_Test

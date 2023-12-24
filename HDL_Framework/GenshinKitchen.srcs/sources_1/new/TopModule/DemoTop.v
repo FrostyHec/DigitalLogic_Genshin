@@ -21,7 +21,7 @@
 
 
 module DemoTop(
-    input [6:0] button,
+    input [4:0] button,
     input [7:0] switches,
 
     output [7:0] led,
