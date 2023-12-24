@@ -68,6 +68,7 @@
 
 //--------------The Game Itself---------------
 //-----targets-----
+`define max_target_number 6'd20
 //-----stroage create-----
 `define Game_Flower_box 6'b000_001
 `define Game_Wheat_box 6'b000_010

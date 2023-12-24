@@ -1,0 +1,82 @@
+\documentclass[12pt, a4paper]{ctexart}
+
+\usepackage{amsmath, amsthm, amssymb, graphicx,float}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+
+\title{数字逻辑项目文档：GenshinKitchen}
+\author{黄政东\\祝超\\何俞均}
+\date{}
+
+\begin{document}
+\maketitle
+
+\newpage
+\section{团队分工}
+\subsection{团队分工}
+贡献比：1:1:1\\
+详细工作安排：
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		~      & project 顶层模块的处理（manualTop, ScriptTop 以及 DemoTop） \\
+		\cline{2-2}
+		~      & 实现接收并用LED显示来自客户端的四个反馈信号                 \\
+		\cline{2-2}
+		黄政东 & 所有模块的代码规范性检查                                    \\
+		\cline{2-2}
+		~      & 实现在手动模式/自动(脚本)模式之间进行切换                   \\
+		\cline{2-2}
+		~      & 部分文档攥写工作                                            \\
+		\hline
+
+		~      & project 手动模式的合法性检查                                \\
+		\cline{2-2}
+		~      & project 脚本模式中jump，wait语句相关模块执行的处理          \\
+		\cline{2-2}
+		祝超   & 各种需要的测试脚本的准备，高效的脚本设计                    \\
+		\cline{2-2}
+		~      & loadingLamp 模块的编写                                      \\
+		\cline{2-2}
+		~      & 部分文档攥写工作                                            \\
+
+		\hline
+		~      & project 手动模式的按键到机器码部分（buttonDecoder模块）     \\
+		\cline{2-2}
+		~      & project 脚本模式中Action、Game State Instruction部分的处理  \\
+		\cline{2-2}
+		何俞均 & 各种需要的测试脚本的准备，高效的脚本设计                    \\
+		\cline{2-2}
+		~      & 错误脚本状态自动处理                                        \\
+		\cline{2-2}
+		~      & 部分文档攥写工作                                            \\
+		\hline
+	\end{tabular}
+	\caption{详细工作安排}
+\end{table}
+
+\subsection{开发计划日程安排和实施情况}
+
+\section{系统功能列表}
+
+\section{系统使用说明}
+
+\section{系统结构说明}
+
+\section{子模块功能说明}
+\subsection{人工模式}
+
+\subsection{脚本模式}
+
+\section{bonus 的实现说明}
+
+
+\section{项目总结}
+
+
+\section{其他的想法和建议}
+
+
+
+
+\end{document}
