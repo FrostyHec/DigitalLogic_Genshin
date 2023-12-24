@@ -7,7 +7,8 @@
 `define In_Switch_GameEnd 1
 `define In_Switch_TargetUp 6
 `define In_Switch_TargetDown 7
-`define In_Switch_StepMode 7
+`define In_Switch_StepMode 4
+`define In_Switch_Step 5
 
 `define In_Button_Get 0
 `define In_Button_Put 1
@@ -62,6 +63,7 @@
 `define Receiver_Feedback_HasItemInHand 3
 `define Receiver_Feedback_IsProcessing 4
 `define Receiver_Feedback_MachineHasItem 5
+`define Receiver_Channel_Script 2'b10
 
 
 //--------------The Game Itself---------------
@@ -108,3 +110,17 @@
 `define oe_thr 5'b100_00
 `define gst_st 2'b01
 `define gst_ed 2'b10
+
+//script
+`define Script_Operate 3'b001
+`define Script_Jump 3'b010
+`define Script_Wait 3'b011
+`define Script_GameState 3'b100
+
+`define Script_GameState_Start 2'b01
+`define Script_GameState_End 2'b10
+
+`define Script_Operate_Get 2'b00
+`define Script_Operate_Put 2'b01
+`define Script_Operate_Interact 2'b10
+`define Script_Operate_Throw 2'b11

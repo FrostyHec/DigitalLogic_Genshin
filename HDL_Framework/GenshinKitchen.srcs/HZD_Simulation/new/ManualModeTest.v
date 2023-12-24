@@ -25,22 +25,24 @@ module ManualModeTest(
         .dataOut_valid(dataOut_valid),
         .dataIn_ready(dataIn_ready),
         .dataIn_bits(dataIn_bits),
-        .next_state(next_state),.current_state(current_state),
+
+        //test
+        .current_state(current_state),
         .manual_new_state_activate(manual_new_state),
         .new_state_activate(new_state_activate)
     );
     initial begin
         button=5'b00_000;
         switches=8'b0000_0000;
-        dataOut_bits=8'b00_1101_01;
+        dataOut_bits=8'b1_00_1100_0;
         dataOut_valid=1'b1;
-        repeat(2) begin
-            switches[7]=1'b1;#20;
+        repeat(20) begin
+            switches[7]=1'b1;#20;//switch changed！参考consV看新的switch
             switches[7]=1'b0;#20;//应该输出信号
         end
         #20 button=5'b000_01;
         // #20 button=5'b001_00;
-        #20 button=5'b000_00;
+        #120 button=5'b000_00;
         #120;
         // repeat(2) begin
         //     switches[7]=1'b1;#20;

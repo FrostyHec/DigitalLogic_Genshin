@@ -17,8 +17,6 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,12 +32,18 @@ add_files -quiet D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framew
 set_property used_in_implementation false [get_files D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/inst_ram_synth_1/inst_ram.dcp]
 read_verilog D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ConstValue.vh
 read_verilog -library xil_defaultlib {
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/ManualFliter.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/OperationEncoder.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetMachineDecoder.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/TargetRegister.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v
   D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v
