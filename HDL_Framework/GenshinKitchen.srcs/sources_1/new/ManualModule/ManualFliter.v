@@ -73,7 +73,8 @@ output reg [7:0] tx
             end 
             // put
             else if(operation == `Sender_Operation_Put) begin
-                if (~istable && ~feedback[`Receiver_Feedback_MachineHasItem] && feedback[`Receiver_Feedback_HasItemInHand]) begin
+                if (//~istable && ~feedback[`Receiver_Feedback_MachineHasItem] && 
+                feedback[`Receiver_Feedback_HasItemInHand]) begin
                     tx=prev_tx;
                 end
                 else begin

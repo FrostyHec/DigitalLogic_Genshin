@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2023.10.26)  23 DEC 2023 20:06
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2023.10.26)  24 DEC 2023 22:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -543,36 +543,35 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-Overfull \hbox (7.84317pt too wide) in paragraph at lines 20--55
+Overfull \hbox (7.84317pt too wide) in paragraph at lines 20--57
  [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 82.
-[2] [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
+(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 90.
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 96--104
+
+ []
+
+[3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (out/main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 82.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 47870EA313FE31625DC9C08CF27EED01;996
-(rerunfilecheck)             After:  8E6CA44E423B428D0DFD00F4BAF30638;1176.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E588A228617D8B5D266FACFF5AC5FED5;1404.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 15880 strings out of 479418
- 335616 string characters out of 5883704
- 613219 words of memory out of 5000000
- 33160 multiletter control sequences out of 15000+600000
+ 15902 strings out of 479418
+ 336870 string characters out of 5883704
+ 615678 words of memory out of 5000000
+ 33182 multiletter control sequences out of 15000+600000
  540256 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 56i,9n,68p,352b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,9n,68p,352b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.pdf (3 pages).
+Output written on out/main.pdf (4 pages).
