@@ -85,10 +85,10 @@ module  ScriptModeTest(
         // dataOut_bits=8'b1_00_1101_0;
 
         // switches=8'b0011_0000;
-        switches=8'b0000_0000;
-        script_mode=1'b0;
-        dataOut_bits=8'b1_00_1100_0;
-        script=16'b0001_0000_000_00_001;
+        // switches=8'b0000_0000;
+        // script_mode=1'b0;
+        // dataOut_bits=8'b1_00_1100_0;
+        // script=16'b0001_0000_000_00_001;
         #8000
         $finish;
     end

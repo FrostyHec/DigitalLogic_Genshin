@@ -87,9 +87,10 @@ JumpScriptHandler js(
     .next_line(jump_next_line)
 );
 wire wait_isFinished;
+reg wait_enable=1'b0;
 WaitScriptHandler ws(
-    .clk(clk),
-    .en(1'b1),
+    .clk(origin_clk),
+    .en(wait_enable),
     .func(func),
     .signal(signal),
     .i_num(i_num),
@@ -113,10 +114,10 @@ reg is_pressed=1'b0;
 //assign led[0]=has_pressed;
 //assign led=script[7:0];
 reg on=1'b0;//??????????????????????????????????????????????????????????????????//
-assign led[4]=on;
-assign led[2]=has_next;
+//assign led[4]=on;
+//assign led[2]=has_next;
 wire [1:0] state ={(counter==init_counter)&&feedback_valid,~has_next&&~new_script};//feedback是否满足？
-assign led[1:0]=state;
+//assign led[1:0]=state;
 always @(posedge clk) begin
     if(en) begin//需要enable
     //获取下一条信号的条件：如果没有在发送数据，且输入的feedback是合法的（newscript防止反复下一条）
@@ -176,7 +177,12 @@ always @(posedge clk) begin
                 counter<=0;//不用计数
             end
             `Script_Wait: begin
-                has_next<=wait_isFinished;
+                if(wait_isFinished) begin
+                    wait_enable<=1'b0;
+                end else begin
+                    wait_enable<=1'b1;
+                end
+                has_next<=~wait_isFinished;
                 new_script<=1'b0;
                 counter<=0;//不用计数
             end
