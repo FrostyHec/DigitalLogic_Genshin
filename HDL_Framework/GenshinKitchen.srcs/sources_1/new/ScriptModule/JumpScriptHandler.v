@@ -15,7 +15,7 @@ wire [3:0] state = feedback[5:2];
 
 always @*
 if(en & ~func[1]) begin
-    if(state[signal] == ~func[0]) begin
+    if(state[signal] == func[0]) begin
         next_line <= i_num;
     end else begin
         next_line <= 8'd1;
