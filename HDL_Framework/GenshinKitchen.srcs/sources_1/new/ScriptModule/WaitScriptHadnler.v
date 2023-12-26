@@ -46,7 +46,7 @@ begin
     end
     else
     begin
-        isFinished <= 1'b1;
+        isFinished <= 1'b0;
     end
 end
 
