@@ -2,7 +2,7 @@
 `timescale 1ns / 1ps
 //此处如果enable为0的话，输出将会为1（相当于直接跳过wait）
 module WaitScriptHandler(
-input clk,en,
+input clk,en,feedback_valid,
 input [1:0] func,
 input [2:0] signal,
 input [7:0] i_num,
@@ -19,7 +19,7 @@ Wait u(clk, enable, i_num, iF);
 
 always @*
 begin
-    if(en)
+    if(en & feedback_valid)
     begin
         if(func == 2'b00)
         begin
