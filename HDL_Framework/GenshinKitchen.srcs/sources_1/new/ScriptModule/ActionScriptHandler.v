@@ -20,7 +20,12 @@ always @* begin
     new_state_activate=1'b0;
     if (en&feedback_valid) begin//?
         if (target_machine==will_machine) begin
-            if(feedback[2]) begin//`Receiver_Feedback_InfrontTargetMachine
+            if(func==`Script_Operate_Throw) begin
+                activation = 1'b1;
+                has_next = 1'b0;
+                tx = {`Sender_Operation_Throw,`Sender_Channel_Operate};
+            end 
+            else if(feedback[2]) begin//`Receiver_Feedback_InfrontTargetMachine
                 led=1'b1;
                 activation = 1'b1;
                 has_next = 1'b0;
@@ -33,9 +38,6 @@ always @* begin
                     end
                     `Script_Operate_Interact: begin
                         tx = {`Sender_Operation_Interact,`Sender_Channel_Operate};
-                    end
-                    `Script_Operate_Throw: begin
-                        tx = {`Sender_Operation_Throw,`Sender_Channel_Operate};
                     end
                     default: begin
                         activation=1'b0;
