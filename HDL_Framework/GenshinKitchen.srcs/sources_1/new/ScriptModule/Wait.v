@@ -8,7 +8,7 @@ output reg isFinished//输出这个条件是否被满足,1为满足，0为未满
 
 parameter period = 1000_0000; //100ms(不是很确定哇)
 reg [31:0] cnt;
-reg [7:0] i;
+reg [7:0] i = 8'd0;
 
 always @(posedge clk)
 begin
@@ -18,6 +18,7 @@ begin
         if(i == i_num)
         begin
             isFinished <= 1'b1;
+            i <= 8'd0;
         end else
         begin
             i <= i+1;
