@@ -4,7 +4,7 @@ module WaitSim(
 
 );
 wire wait_isFinished;
-reg wait_enable=1'b0;
+reg wait_enable=1'b1;
 reg clk=1'b0;
 reg [1:0] func;
 reg [2:0] i_sign;
@@ -15,11 +15,12 @@ WaitScriptHandler ws(
     .clk(clk),
     .en(wait_enable),
     .func(func),
-    .signal(signal),
+    .signal(i_sign),
     .i_num(i_num),
     .feedback(feedback),
     .feedback_valid(feedback_valid),
     .isFinished(wait_isFinished)
+
 );
     initial begin
         forever begin

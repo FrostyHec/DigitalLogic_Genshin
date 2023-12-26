@@ -8,45 +8,49 @@ input [2:0] signal,
 input [7:0] i_num,
 input [7:0] feedback,//反馈
 output reg isFinished = 1'b0//输出这个条件是否被满足,1为满足，0为未满足
+
+,output led
 );
 
 reg enable = 1'b0;
 wire [3:0] state = feedback[5:2];
 wire iF;
+//test
+wire led2;
+assign led=led2;
 
 //等待i_num个100ms，完事以后输出的iF就是1'b1
-Wait u(clk, enable, i_num, iF);
-
+Wait u(clk, enable, i_num, iF,led2);
 always @*
 begin
     if(en & feedback_valid)
     begin
         if(func == 2'b00)
         begin
-            enable <= 1'b1;
-            isFinished <= iF;
+            enable = 1'b1;
+            isFinished = iF;
             if(iF)
             begin
-                enable <= 1'b0;
+                enable = 1'b0;
             end
         end else if(func == 2'b01)
         begin
             if(state[signal] == 1'b1) 
             begin
-                isFinished <= 1'b1;
+                isFinished = 1'b1;
             end
             else
             begin
-                isFinished <= 1'b0;
+                isFinished = 1'b0;
             end
         end else 
         begin
-            isFinished <= 1'b1;
+            isFinished = 1'b1;
         end
     end
     else
     begin
-        isFinished <= 1'b0;
+        isFinished = 1'b0;
     end
 end
 
