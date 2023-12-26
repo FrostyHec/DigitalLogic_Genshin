@@ -16,39 +16,41 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Vivado/project/project/HDL_Framework/GenshinKitchen.cache/wt [current_project]
-set_property parent.project_path D:/Vivado/project/project/HDL_Framework/GenshinKitchen.xpr [current_project]
+set_property webtalk.parent_dir D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.cache/wt [current_project]
+set_property parent.project_path D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/Vivado/project/project/HDL_Framework/GenshinKitchen.cache/ip [current_project]
+set_property ip_output_repo d:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files -quiet D:/Vivado/project/project/HDL_Framework/GenshinKitchen.runs/inst_ram_synth_1/inst_ram.dcp
-set_property used_in_implementation false [get_files D:/Vivado/project/project/HDL_Framework/GenshinKitchen.runs/inst_ram_synth_1/inst_ram.dcp]
-read_verilog D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ConstValue.vh
+add_files -quiet D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/inst_ram_synth_1/inst_ram.dcp
+set_property used_in_implementation false [get_files D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/inst_ram_synth_1/inst_ram.dcp]
+read_verilog D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ConstValue.vh
 read_verilog -library xil_defaultlib {
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/ManualFliter.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/OperationEncoder.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetMachineDecoder.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/TargetRegister.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v
-  D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/JumpScriptHandler.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/ManualFliter.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/OperationEncoder.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetMachineDecoder.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/TargetRegister.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/WaitScriptHadnler.v
+  D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -58,8 +60,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc
-set_property used_in_implementation false [get_files D:/Vivado/project/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
+read_xdc D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc
+set_property used_in_implementation false [get_files D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 
 
 synth_design -top DemoTop -part xc7a35tcsg324-1

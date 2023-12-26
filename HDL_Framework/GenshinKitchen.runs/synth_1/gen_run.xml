@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703589480">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703594523">
   <File Type="PA-TCL" Name="DemoTop.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="DemoTop_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="DemoTop_reports.tcl"/>
   <File Type="RDS-RDS" Name="DemoTop.vds"/>
   <File Type="RDS-UTIL" Name="DemoTop_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="DemoTop_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="DemoTop.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="DemoTop_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="DemoTop_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PRUNDIR/inst_ram_synth_1/inst_ram.dcp">
@@ -49,6 +52,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/ScriptModule/GameStateScriptHandler.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ScriptModule/JumpScriptHandler.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -132,6 +142,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/ScriptModule/Wait.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ScriptModule/WaitScriptHadnler.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/TopModule/DemoTop.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -140,30 +164,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/ManualModule/FeedbackLED.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ScriptModule/JumpScriptHandler.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ScriptModule/WaitScriptHadnler.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ScriptModule/Wait.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

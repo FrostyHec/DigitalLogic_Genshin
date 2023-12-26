@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Dec 26 19:19:08 2023
-| Host         : Super running 64-bit major release  (build 9200)
+| Date         : Tue Dec 26 20:43:05 2023
+| Host         : LAPTOP-OLOKS0CM running 64-bit major release  (build 9200)
 | Command      : report_methodology -file DemoTop_methodology_drc_routed.rpt -pb DemoTop_methodology_drc_routed.pb -rpx DemoTop_methodology_drc_routed.rpx
 | Design       : DemoTop
 | Device       : xc7a35tcsg324-1
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 224
+             Violations found: 265
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 195        |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 236        |
 | TIMING-20 | Warning  | Non-clocked latch           | 29         |
 +-----------+----------+-----------------------------+------------+
 
@@ -655,355 +655,560 @@ Related violations: <none>
 
 TIMING-17#125 Warning
 Non-clocked sequential cell  
-The clock pin dst/trg/state_reg[0]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#126 Warning
 Non-clocked sequential cell  
-The clock pin dst/trg/state_reg[1]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#127 Warning
 Non-clocked sequential cell  
-The clock pin dst/trg/state_reg[2]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#128 Warning
 Non-clocked sequential cell  
-The clock pin dst/trg/state_reg[3]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#129 Warning
 Non-clocked sequential cell  
-The clock pin dst/trg/state_reg[4]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#130 Warning
 Non-clocked sequential cell  
-The clock pin dst/trg/state_reg[5]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#131 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#132 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_cnt_reg[0]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#133 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_cnt_reg[1]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#134 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_cnt_reg[2]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#135 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_cnt_reg[3]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#136 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_cnt_reg[4]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#137 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_cnt_reg[5]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#138 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_cnt_reg[6]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#139 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_cnt_reg[7]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#140 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_size_reg[0]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#141 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_size_reg[1]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#142 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_size_reg[2]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#143 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_size_reg[3]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#144 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_size_reg[4]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#145 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_size_reg[5]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#146 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_size_reg[6]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#147 Warning
 Non-clocked sequential cell  
-The clock pin script_mem_module/script_size_reg[7]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#148 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/clkCnt_reg[0]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#149 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/clkCnt_reg[1]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#150 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/clkCnt_reg[2]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#151 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/clkCnt_reg[3]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#152 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_bits_reg[0]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#153 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_bits_reg[1]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#154 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_bits_reg[2]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#155 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_bits_reg[3]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#156 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_bits_reg[4]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/cnt_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#157 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_bits_reg[5]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/i_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#158 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_bits_reg[6]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/i_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#159 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_bits_reg[7]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/i_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#160 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_valid_reg/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/i_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#161 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/io_dataOut_valid_reg_lopt_replica/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/i_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#162 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/bit_0_reg/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/i_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#163 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/cnt_reg[0]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/i_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#164 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/cnt_reg[1]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/i_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#165 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/cnt_reg[2]/C is not reached by a timing clock
+The clock pin dst/sp/ws/u/isFinished_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#166 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/data_0_reg/C is not reached by a timing clock
+The clock pin dst/trg/state_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#167 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/data_1_reg/C is not reached by a timing clock
+The clock pin dst/trg/state_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#168 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/data_2_reg/C is not reached by a timing clock
+The clock pin dst/trg/state_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#169 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/data_3_reg/C is not reached by a timing clock
+The clock pin dst/trg/state_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#170 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/data_4_reg/C is not reached by a timing clock
+The clock pin dst/trg/state_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#171 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/data_5_reg/C is not reached by a timing clock
+The clock pin dst/trg/state_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#172 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/data_6_reg/C is not reached by a timing clock
+The clock pin script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#173 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/data_7_reg/C is not reached by a timing clock
+The clock pin script_mem_module/script_cnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#174 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/spacing_reg[0]/C is not reached by a timing clock
+The clock pin script_mem_module/script_cnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#175 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/spacing_reg[1]/C is not reached by a timing clock
+The clock pin script_mem_module/script_cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#176 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/spacing_reg[2]/C is not reached by a timing clock
+The clock pin script_mem_module/script_cnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#177 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/spacing_reg[3]/C is not reached by a timing clock
+The clock pin script_mem_module/script_cnt_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#178 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/state_reg[0]/C is not reached by a timing clock
+The clock pin script_mem_module/script_cnt_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#179 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/state_reg[1]/C is not reached by a timing clock
+The clock pin script_mem_module/script_cnt_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#180 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/state_reg[2]/C is not reached by a timing clock
+The clock pin script_mem_module/script_cnt_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#181 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/state_reg[3]/C is not reached by a timing clock
+The clock pin script_mem_module/script_size_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#182 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/sync_r_reg/C is not reached by a timing clock
+The clock pin script_mem_module/script_size_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#183 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/rx/sync_reg/C is not reached by a timing clock
+The clock pin script_mem_module/script_size_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#184 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/data_reg[0]/C is not reached by a timing clock
+The clock pin script_mem_module/script_size_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#185 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/data_reg[1]/C is not reached by a timing clock
+The clock pin script_mem_module/script_size_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#186 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/data_reg[2]/C is not reached by a timing clock
+The clock pin script_mem_module/script_size_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#187 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/data_reg[3]/C is not reached by a timing clock
+The clock pin script_mem_module/script_size_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#188 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/data_reg[4]/C is not reached by a timing clock
+The clock pin script_mem_module/script_size_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#189 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/data_reg[5]/C is not reached by a timing clock
+The clock pin uart_module/clkCnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#190 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/data_reg[6]/C is not reached by a timing clock
+The clock pin uart_module/clkCnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#191 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/data_reg[7]/C is not reached by a timing clock
+The clock pin uart_module/clkCnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#192 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/state_reg[0]/C is not reached by a timing clock
+The clock pin uart_module/clkCnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#193 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/state_reg[1]/C is not reached by a timing clock
+The clock pin uart_module/io_dataOut_bits_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#194 Warning
 Non-clocked sequential cell  
-The clock pin uart_module/tx/state_reg[2]/C is not reached by a timing clock
+The clock pin uart_module/io_dataOut_bits_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#195 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/io_dataOut_bits_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#196 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/io_dataOut_bits_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#197 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/io_dataOut_bits_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#198 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/io_dataOut_bits_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#199 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/io_dataOut_bits_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#200 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/io_dataOut_bits_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#201 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/io_dataOut_valid_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#202 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/io_dataOut_valid_reg_lopt_replica/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#203 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/bit_0_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#204 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/cnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#205 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/cnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#206 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/cnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#207 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/data_0_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#208 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/data_1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#209 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/data_2_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#210 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/data_3_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#211 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/data_4_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#212 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/data_5_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#213 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/data_6_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#214 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/data_7_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#215 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/spacing_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#216 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/spacing_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#217 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/spacing_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#218 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/spacing_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#219 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#220 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#221 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#222 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/state_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#223 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/sync_r_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#224 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/rx/sync_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#225 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/data_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#226 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/data_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#227 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/data_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#228 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/data_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#229 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/data_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#230 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/data_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#231 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/data_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#232 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/data_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#233 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#234 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#235 Warning
+Non-clocked sequential cell  
+The clock pin uart_module/tx/state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#236 Warning
 Non-clocked sequential cell  
 The clock pin uart_module/tx/state_reg[3]/C is not reached by a timing clock
 Related violations: <none>
