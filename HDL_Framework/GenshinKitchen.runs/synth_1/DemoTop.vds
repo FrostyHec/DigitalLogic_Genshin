@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Dec 26 20:55:15 2023
-# Process ID: 2260
+# Start of session at: Tue Dec 26 21:32:26 2023
+# Process ID: 15012
 # Current directory: D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1
 # Command line: vivado.exe -log DemoTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoTop.tcl
 # Log file: D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.vds
@@ -15,14 +15,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8536 
+INFO: Helper process launched with PID 3512 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 388.930 ; gain = 99.137
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 388.547 ; gain = 99.094
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DemoTop' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:23]
 INFO: [Synth 8-638] synthesizing module 'ScriptMem' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:23]
-INFO: [Synth 8-638] synthesizing module 'inst_ram' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-2260-LAPTOP-OLOKS0CM/realtime/inst_ram_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'inst_ram' (1#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-2260-LAPTOP-OLOKS0CM/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'inst_ram' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-15012-LAPTOP-OLOKS0CM/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'inst_ram' (1#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-15012-LAPTOP-OLOKS0CM/realtime/inst_ram_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'ScriptMem' (2#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:23]
 INFO: [Synth 8-638] synthesizing module 'UART' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:128]
 INFO: [Synth 8-638] synthesizing module 'UARTTransmitter' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:3]
@@ -82,6 +82,8 @@ INFO: [Synth 8-638] synthesizing module 'Wait' [D:/ComputerScience/Projects/Digi
 INFO: [Synth 8-256] done synthesizing module 'Wait' (17#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:3]
 INFO: [Synth 8-256] done synthesizing module 'WaitScriptHandler' (18#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/WaitScriptHadnler.v:4]
 WARNING: [Synth 8-689] width (1) of port connection 'signal' does not match port width (3) of module 'WaitScriptHandler' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:94]
+WARNING: [Synth 8-6014] Unused sequential element on_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:192]
+WARNING: [Synth 8-3848] Net led in module/entity ScriptTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:7]
 WARNING: [Synth 8-3848] Net signal in module/entity ScriptTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:84]
 INFO: [Synth 8-256] done synthesizing module 'ScriptTop' (19#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:3]
 INFO: [Synth 8-638] synthesizing module 'SwitchStateEncoder' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:3]
@@ -91,27 +93,6 @@ INFO: [Synth 8-256] done synthesizing module 'TargetRegister' (21#1) [D:/Compute
 WARNING: [Synth 8-567] referenced signal 'current_script' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:126]
 WARNING: [Synth 8-567] referenced signal 'manual_new_state_activate' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:139]
 WARNING: [Synth 8-567] referenced signal 'sc_new_state_activate' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:139]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[1] with 1st driver pin 'DesignedTop:/mt/led2[1]' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[1] with 2nd driver pin 'GND' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net led2[1] is connected to constant driver, other driver is ignored [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[2] with 1st driver pin 'DesignedTop:/mt/led2[2]' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[2] with 2nd driver pin 'GND' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net led2[2] is connected to constant driver, other driver is ignored [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[3] with 1st driver pin 'DesignedTop:/mt/led2[3]' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[3] with 2nd driver pin 'GND' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net led2[3] is connected to constant driver, other driver is ignored [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[4] with 1st driver pin 'DesignedTop:/mt/led2[4]' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[4] with 2nd driver pin 'GND' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net led2[4] is connected to constant driver, other driver is ignored [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[5] with 1st driver pin 'DesignedTop:/mt/led2[5]' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[5] with 2nd driver pin 'GND' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net led2[5] is connected to constant driver, other driver is ignored [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[6] with 1st driver pin 'DesignedTop:/mt/led2[6]' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[6] with 2nd driver pin 'GND' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net led2[6] is connected to constant driver, other driver is ignored [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[7] with 1st driver pin 'DesignedTop:/mt/led2[7]' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led2[7] with 2nd driver pin 'GND' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net led2[7] is connected to constant driver, other driver is ignored [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
 INFO: [Synth 8-256] done synthesizing module 'DesignedTop' (22#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
 WARNING: [Synth 8-350] instance 'dst' of module 'DesignedTop' requires 19 connections, but only 13 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:81]
 INFO: [Synth 8-256] done synthesizing module 'DemoTop' (23#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:23]
@@ -166,7 +147,11 @@ WARNING: [Synth 8-3331] design GameStateScriptHandler has unconnected port targe
 WARNING: [Synth 8-3331] design ScriptTop has unconnected port led[7]
 WARNING: [Synth 8-3331] design ScriptTop has unconnected port led[6]
 WARNING: [Synth 8-3331] design ScriptTop has unconnected port led[5]
+WARNING: [Synth 8-3331] design ScriptTop has unconnected port led[4]
 WARNING: [Synth 8-3331] design ScriptTop has unconnected port led[3]
+WARNING: [Synth 8-3331] design ScriptTop has unconnected port led[2]
+WARNING: [Synth 8-3331] design ScriptTop has unconnected port led[1]
+WARNING: [Synth 8-3331] design ScriptTop has unconnected port led[0]
 WARNING: [Synth 8-3331] design ScriptTop has unconnected port in[7]
 WARNING: [Synth 8-3331] design ScriptTop has unconnected port in[6]
 WARNING: [Synth 8-3331] design ScriptTop has unconnected port in[3]
@@ -202,7 +187,7 @@ WARNING: [Synth 8-3331] design DesignedTop has unconnected port dataIn_ready
 WARNING: [Synth 8-3331] design ScriptMem has unconnected port reset
 WARNING: [Synth 8-3331] design DemoTop has unconnected port rst_n
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 440.285 ; gain = 150.492
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 439.805 ; gain = 150.352
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -214,15 +199,15 @@ Report Check Netlist:
 WARNING: [Synth 8-3295] tying undriven pin js:signal[0] to constant 0 [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:80]
 WARNING: [Synth 8-3295] tying undriven pin ws:signal[0] to constant 0 [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:90]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 440.285 ; gain = 150.492
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 439.805 ; gain = 150.352
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-2260-LAPTOP-OLOKS0CM/dcp3/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
-Finished Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-2260-LAPTOP-OLOKS0CM/dcp3/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-15012-LAPTOP-OLOKS0CM/dcp3/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Finished Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-15012-LAPTOP-OLOKS0CM/dcp3/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
 Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 WARNING: [Vivado 12-584] No ports matched 'button[5]'. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc:70]
 WARNING: [Vivado 12-584] No ports matched 'button[6]'. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc:71]
@@ -235,22 +220,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 772.727 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 772.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 772.727 ; gain = 482.934
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 772.879 ; gain = 483.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 772.727 ; gain = 482.934
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 772.879 ; gain = 483.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 772.727 ; gain = 482.934
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 772.879 ; gain = 483.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "script_size" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element script_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:36]
@@ -267,6 +252,7 @@ WARNING: [Synth 8-6014] Unused sequential element prev_op_activated_reg was remo
 INFO: [Synth 8-5544] ROM "activation" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "isFinished" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:18]
 INFO: [Synth 8-5544] ROM "switch_init" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -282,7 +268,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'current_script_reg' [D:/Com
 WARNING: [Synth 8-327] inferring latch for variable 'switch_init_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:14]
 WARNING: [Synth 8-327] inferring latch for variable 'next_out_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:38]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 772.727 ; gain = 482.934
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 772.879 ; gain = 483.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -312,7 +298,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 4     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 24    
+	                1 Bit    Registers := 23    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   7 Input     16 Bit        Muxes := 1     
@@ -331,7 +317,7 @@ Detailed RTL Component Info :
 	   5 Input      3 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 49    
+	   2 Input      1 Bit        Muxes := 47    
 	   3 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 5     
@@ -467,7 +453,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module WaitScriptHandler 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -481,15 +467,15 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 5     
 +---Muxes : 
 	   7 Input     16 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   5 Input      8 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 22    
 	   5 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 19    
 	   7 Input      1 Bit        Muxes := 1     
 Module SwitchStateEncoder 
 Detailed RTL Component Info : 
@@ -526,30 +512,29 @@ WARNING: [Synth 8-6014] Unused sequential element dst/sp/illegal_code_reg was re
 INFO: [Synth 8-5544] ROM "dst/sp/as/tx1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "dst/sp/ws/u/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "dst/sp/ws/u/isFinished" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dst/sp/ws/u/i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element script_mem_module/script_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:36]
 WARNING: [Synth 8-6014] Unused sequential element uart_module/rx/spacing_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:59]
 WARNING: [Synth 8-6014] Unused sequential element uart_module/clkCnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:143]
 WARNING: [Synth 8-6014] Unused sequential element c/counter_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:7]
 WARNING: [Synth 8-6014] Unused sequential element dst/mt/prev_op_activated_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:82]
 WARNING: [Synth 8-6014] Unused sequential element dst/sp/ws/u/i_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:18]
-WARNING: [Synth 8-3917] design DemoTop has port led2[7] driven by constant 0
-WARNING: [Synth 8-3917] design DemoTop has port led2[6] driven by constant 0
-WARNING: [Synth 8-3917] design DemoTop has port led2[5] driven by constant 0
-WARNING: [Synth 8-3917] design DemoTop has port led2[4] driven by constant 0
-WARNING: [Synth 8-3917] design DemoTop has port led2[3] driven by constant 0
-WARNING: [Synth 8-3917] design DemoTop has port led2[2] driven by constant 0
-WARNING: [Synth 8-3917] design DemoTop has port led2[1] driven by constant 0
-WARNING: [Synth 8-3331] design DemoTop has unconnected port led[7]
-WARNING: [Synth 8-3331] design DemoTop has unconnected port led[6]
-WARNING: [Synth 8-3331] design DemoTop has unconnected port led[5]
-WARNING: [Synth 8-3331] design DemoTop has unconnected port led[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[6]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[5]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[0]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[3]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[2]
-WARNING: [Synth 8-3331] design DemoTop has unconnected port rst_n
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'dst/sp/gs/tx_reg[7]' (LD) to 'dst/sp/gs/tx_reg[1]'
 INFO: [Synth 8-3886] merging instance 'dst/sp/gs/tx_reg[6]' (LD) to 'dst/sp/gs/tx_reg[1]'
 INFO: [Synth 8-3886] merging instance 'dst/sp/gs/tx_reg[5]' (LD) to 'dst/sp/gs/tx_reg[1]'
 INFO: [Synth 8-3886] merging instance 'dst/sp/gs/tx_reg[4]' (LD) to 'dst/sp/gs/tx_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/sp/pc_reg[0] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\dst/sp/as/tx_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/sp/gs/tx_reg[1] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\dst/sp/gs/tx_reg[0] )
@@ -558,7 +543,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/g
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/gs/tx_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/gs/tx_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/gs/tx_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/sp/pc_reg[0] )
 INFO: [Synth 8-3886] merging instance 'dst/mt/gs/prev_tx_reg[6]' (FD) to 'dst/mt/gs/prev_tx_reg[7]'
 INFO: [Synth 8-3886] merging instance 'dst/mt/gs/prev_tx_reg[7]' (FD) to 'dst/mt/gs/prev_tx_reg[5]'
 INFO: [Synth 8-3886] merging instance 'dst/mt/gs/prev_tx_reg[1]' (FD) to 'dst/mt/gs/prev_tx_reg[5]'
@@ -577,13 +561,10 @@ WARNING: [Synth 8-3332] Sequential element (dst/sp/gs/tx_reg[0]) is unused and w
 WARNING: [Synth 8-3332] Sequential element (dst/sp/gs/activation_reg) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (dst/sp/as/tx_reg[1]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (dst/sp/as/led_reg) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/next_out_reg[7]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/next_out_reg[6]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/next_out_reg[4]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (dst/sp/pc_reg[0]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/prev_tx_reg[5]) is unused and will be removed from module DemoTop.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 772.727 ; gain = 482.934
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 772.879 ; gain = 483.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -595,13 +576,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 775.383 ; gain = 485.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 774.188 ; gain = 484.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 775.758 ; gain = 485.965
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 774.559 ; gain = 485.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -613,7 +594,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 798.062 ; gain = 508.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -637,7 +618,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 798.062 ; gain = 508.609
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -650,7 +631,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 798.062 ; gain = 508.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -662,25 +643,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 798.062 ; gain = 508.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 798.062 ; gain = 508.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 798.062 ; gain = 508.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 798.062 ; gain = 508.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -700,64 +681,64 @@ Report Cell Usage:
 |1     |inst_ram |     1|
 |2     |BUFG     |     2|
 |3     |CARRY4   |    23|
-|4     |LUT1     |     8|
-|5     |LUT2     |    47|
-|6     |LUT3     |    39|
+|4     |LUT1     |     7|
+|5     |LUT2     |    46|
+|6     |LUT3     |    38|
 |7     |LUT4     |    56|
-|8     |LUT5     |    61|
-|9     |LUT6     |    76|
-|10    |FDRE     |   233|
+|8     |LUT5     |    65|
+|9     |LUT6     |    81|
+|10    |FDRE     |   232|
 |11    |FDSE     |     1|
-|12    |LD       |    27|
+|12    |LD       |    30|
 |13    |LDC      |     2|
 |14    |IBUF     |    13|
-|15    |OBUF     |    13|
-|16    |OBUFT    |     4|
+|15    |OBUF     |     9|
+|16    |OBUFT    |     8|
 +------+---------+------+
 
 Report Instance Areas: 
 +------+--------------------+-----------------------+------+
 |      |Instance            |Module                 |Cells |
 +------+--------------------+-----------------------+------+
-|1     |top                 |                       |   621|
+|1     |top                 |                       |   629|
 |2     |  c                 |DelayClock             |    52|
-|3     |  dst               |DesignedTop            |   352|
-|4     |    mt              |ManualTop              |   113|
+|3     |  dst               |DesignedTop            |   362|
+|4     |    mt              |ManualTop              |   112|
 |5     |      gs            |GameStateEncoder       |     9|
-|6     |      tsm           |TargetStateMachine     |    28|
-|7     |    sp              |ScriptTop              |   187|
+|6     |      tsm           |TargetStateMachine     |    27|
+|7     |    sp              |ScriptTop              |   194|
 |8     |      as            |ActionScriptHandler    |    17|
 |9     |      gs            |GameStateScriptHandler |     2|
 |10    |      ws            |WaitScriptHandler      |    70|
 |11    |        u           |Wait                   |    70|
 |12    |    sse             |SwitchStateEncoder     |     6|
-|13    |    trg             |TargetRegister         |    30|
-|14    |  script_mem_module |ScriptMem              |   100|
-|15    |  uart_module       |UART                   |    85|
+|13    |    trg             |TargetRegister         |    31|
+|14    |  script_mem_module |ScriptMem              |    99|
+|15    |  uart_module       |UART                   |    84|
 |16    |    rx              |UARTReceiver           |    38|
 |17    |    tx              |UARTTransmitter        |    27|
 +------+--------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 798.062 ; gain = 508.609
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 799.375 ; gain = 177.141
-Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 799.375 ; gain = 509.582
+Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:22 . Memory (MB): peak = 798.062 ; gain = 175.535
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:26 . Memory (MB): peak = 798.062 ; gain = 508.609
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 68 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 29 instances were transformed.
-  LD => LDCE: 27 instances
+  A total of 32 instances were transformed.
+  LD => LDCE: 30 instances
   LDC => LDCE: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-92 Infos, 164 Warnings, 21 Critical Warnings and 0 Errors encountered.
+95 Infos, 163 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 799.375 ; gain = 518.117
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 798.062 ; gain = 517.316
 INFO: [Common 17-1381] The checkpoint 'D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DemoTop_utilization_synth.rpt -pb DemoTop_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 799.375 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 26 20:55:40 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 798.062 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 26 21:32:58 2023...
