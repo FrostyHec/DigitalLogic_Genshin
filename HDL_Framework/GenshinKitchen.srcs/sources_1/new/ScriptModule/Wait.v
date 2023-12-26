@@ -1,7 +1,7 @@
 `include "../ConstValue.vh"
 `timescale 1ns / 1ps
 module Wait(
-input clk,
+input clk, en,
 input [7:0] i_num,
 output reg isFinished//输出这个条件是否被满足,1为满足，0为未满足
 );
@@ -12,22 +12,32 @@ reg [7:0] i = 8'd0;
 
 always @(posedge clk)
 begin
-    isFinished <= 1'b0;
-    if(cnt == (period >> 1) - 1)
-    begin 
-        if(i == i_num)
-        begin
-            isFinished <= 1'b1;
-            i <= 8'd0;
-        end else
-        begin
-            i <= i+1;
-        end
-        cnt <= 0;
-    end
-    else 
+    if(~en)
     begin
-        cnt <= cnt + 1;
+        cnt <= 0;
+        i = 8'd0;
+        isFinished <= 1'b0;
+    end
+    else
+    begin
+        if(cnt == (period >> 1) - 1)
+        begin 
+            if(i == i_num)
+            begin
+                isFinished <= 1'b1;
+                i <= 8'd0;
+            end else
+            begin
+                i <= i+1;
+                isFinished <= 1'b0;
+            end
+            cnt <= 0;
+        end
+        else 
+        begin
+            isFinished <= 1'b0;
+            cnt <= cnt + 1;
+        end
     end
 end
 
