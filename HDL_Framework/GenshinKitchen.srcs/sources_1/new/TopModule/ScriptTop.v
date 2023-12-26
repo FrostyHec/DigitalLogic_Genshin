@@ -87,9 +87,10 @@ JumpScriptHandler js(
     .next_line(jump_next_line)
 );
 wire wait_isFinished;
+reg wait_enable=1'b0;
 WaitScriptHandler ws(
-    .clk(clk),
-    .en(1'b1),
+    .clk(origin_clk),
+    .en(wait_enable),
     .func(func),
     .signal(signal),
     .i_num(i_num),
@@ -176,6 +177,11 @@ always @(posedge clk) begin
                 counter<=0;//不用计数
             end
             `Script_Wait: begin
+                if(wait_isFinished) begin
+                    wait_enable<=1'b0;
+                end else begin
+                    wait_enable<=1'b1;
+                end
                 has_next<=~wait_isFinished;
                 new_script<=1'b0;
                 counter<=0;//不用计数

@@ -145,7 +145,8 @@ module DesignedTop(
     end
 
     //led
-    assign led=next_out;
+    assign led[3:0]=next_out[5:2];
+    assign led[7]=current_script;
     //assign led2=dataOut_valid;
     //assign led[1]=dataOut_valid;
     //assign led[0]=illegal_code;
