@@ -73,11 +73,13 @@ ActionScriptHandler as(
     .has_next(operation_has_next),
     .new_state(operation_new_state),
     .new_state_activate(new_state_activate)
+
+    //,.led(led[7])
 );
 
-parameter cnt=8'b0000_1010;
-parameter init_counter=8'b0000_0000;
-reg [7:0] counter=init_counter;//1'd0;//if ==0 no sending
+parameter cnt=1000;
+parameter init_counter=0;
+reg [15:0] counter=init_counter;//1'd0;//if ==0 no sending
 reg has_next=1'b0;
 reg new_script=1'b0;
 reg is_pressed=1'b0;
@@ -89,7 +91,11 @@ reg is_pressed=1'b0;
 //assign led[5]=new_script;
 //assign led[0]=has_pressed;
 //assign led=script[7:0];
+reg on=1'b0;//??????????????????????????????????????????????????????????????????//
+assign led[4]=on;
+assign led[2]=has_next;
 wire [1:0] state ={(counter==init_counter)&&feedback_valid,~has_next&&~new_script};//feedback是否满足？
+assign led[1:0]=state;
 always @(posedge clk) begin
     if(en) begin//需要enable
     //获取下一条信号的条件：如果没有在发送数据，且输入的feedback是合法的（newscript防止反复下一条）
@@ -151,8 +157,10 @@ always @(posedge clk) begin
         default: begin
             if(counter>cnt) begin//信号发送完毕
                 counter<=init_counter;
+                on<=1'b0;
             end else if(counter>init_counter) begin//如果计数器已经开启（>0）,就一直++
                 counter<=counter+1;
+                on<=1'b1;
             end
         end
     endcase
