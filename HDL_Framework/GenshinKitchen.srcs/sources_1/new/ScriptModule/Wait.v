@@ -15,12 +15,12 @@ begin
     isFinished <= 1'b0;
     if(cnt == (period >> 1) - 1)
     begin 
-        if(i == 8'd0)
+        if(i == i_num)
         begin
             isFinished <= 1'b1;
         end else
         begin
-            i <= i-1;
+            i <= i+1;
         end
         cnt <= 0;
     end
