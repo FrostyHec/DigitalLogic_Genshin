@@ -6,19 +6,22 @@ input [1:0] func,
 input [2:0] signal,
 input [7:0] i_num,
 input [5:0] target_machine,
-input [7:0] feedback,
+input [7:0] feedback,//which to put？
 input feedback_valid,
 output reg [7:0] tx,
 output reg activation, has_next,
 output reg [5:0] new_state,
-output reg new_state_activate=1'b0
+output reg new_state_activate=1'b0,
+output reg led//???????????????????????????
 );
 wire [5:0] will_machine=i_num[5:0];
 always @* begin
+    //led=8'b0000_0000;
     new_state_activate=1'b0;
-    if (en&feedback_valid) begin//
+    if (en&feedback_valid) begin//?
         if (target_machine==will_machine) begin
-            if(feedback[`Receiver_Feedback_InfrontTargetMachine]) begin
+            if(feedback[2]) begin//`Receiver_Feedback_InfrontTargetMachine
+                led=1'b1;
                 activation = 1'b1;
                 has_next = 1'b0;
                 case (func)
@@ -37,11 +40,11 @@ always @* begin
                     default: begin
                         activation=1'b0;
                     end
-                endcase 
+                endcase
             end else begin
                 activation = 1'b1;
                 has_next = 1'b1;
-                tx = {`Sender_Operation_Move,`Sender_Channel_Operate}; 
+                tx = {`Sender_Operation_Move,`Sender_Channel_Operate};  
             end
         end else begin
             activation = 1'b1;
