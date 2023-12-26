@@ -39,8 +39,14 @@ initial begin
     feedback_valid=1'b1;
     #50
     state=5'b010_00;
+    feedback_valid=1'b0;
     #50
+    feedback_valid=1'b1;
+    #50
+    feedback_valid=1'b0;
     feedback=8'b00_1101_01;//在机子前面
+    #50
+    feedback_valid=1'b1;
     #100;
     $finish;
 end

@@ -68,7 +68,7 @@ module DesignedTop(
       .origin_clk(origin_clk),
       .clk(clk),
 
-      .feedback(module_rx),
+      .feedback(dataOut_bits),
       .feedback_valid(dataOut_valid),
 
       .pc(pc),
@@ -108,7 +108,7 @@ module DesignedTop(
     //assign io_dataIn_bits=switches;
     always @(posedge clk) begin//output
       if(current_script) begin
-        //script module. 注意wait模块传入�?个真实时�?
+        //script module. 注意wait模块传入�??个真实时�??
         script_en<=1'b1;
         dataIn_bits<=script_tx;
       end else begin
@@ -121,8 +121,8 @@ module DesignedTop(
     
 
     //传入ST: 1. next_out作为dataOut_bits
-    //ST�?要：enable判断�?启（外部切换
-    //传入状态
+    //ST�??要：enable判断�??启（外部切换
+    //传入状�??
     always @(mt_next_state,script_new_state) begin
       if(current_script) begin
         next_state=script_new_state;
@@ -133,7 +133,7 @@ module DesignedTop(
 
     always @(*) begin
       if(dataOut_valid) begin
-        next_out={dataOut_bits[6:0],dataOut_bits[7]};//可能�?要改（校验数据合法�?�）,there's bugs so using this assgin
+        next_out={dataOut_bits[6:0],dataOut_bits[7]};//可能�??要改（校验数据合法�?�）,there's bugs so using this assgin
       end
     end
     always @(next_state) begin
@@ -145,9 +145,9 @@ module DesignedTop(
     end
 
     //led
-    assign led2=next_out;
-    assign led[1]=dataOut_valid;
-    assign led[0]=illegal_code;
+    assign led2=dataOut_valid;
+    //assign led[1]=dataOut_valid;
+    //assign led[0]=illegal_code;
     //assign led[6:0]=dataIn_bits[6:0];
     //assign led=dataIn_bits;
     // assign led[0]=current_script;
