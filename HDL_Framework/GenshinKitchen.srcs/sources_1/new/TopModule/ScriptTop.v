@@ -76,6 +76,27 @@ ActionScriptHandler as(
 
     //,.led(led[7])
 );
+wire [7:0] jump_next_line;
+JumpScriptHandler js(
+    .clk(clk),
+    .en(1'b1),
+    .func(func),
+    .signal(signal),
+    .i_num(i_num),
+    .feedback(feedback),
+    .next_line(jump_next_line)
+);
+wire wait_isFinished;
+WaitScriptHandler ws(
+    .clk(clk),
+    .en(1'b1),
+    .func(func),
+    .signal(signal),
+    .i_num(i_num),
+    .feedback(feedback),
+    .isFinished(wait_isFinished)
+);
+
 
 parameter cnt=1000;
 parameter init_counter=0;
@@ -147,6 +168,17 @@ always @(posedge clk) begin
                 end else begin
                     illegal_code<=1'b1;
                 end
+            end
+            `Script_Jump: begin
+                pc<=pc+2*jump_next_line-2;
+                has_next<=1'b0;
+                new_script<=1'b0;
+                counter<=0;//不用计数
+            end
+            `Script_Wait: begin
+                has_next<=wait_isFinished;
+                new_script<=1'b0;
+                counter<=0;//不用计数
             end
             //其他状态
             default: begin//不应该出现这个状态，亮灯下
