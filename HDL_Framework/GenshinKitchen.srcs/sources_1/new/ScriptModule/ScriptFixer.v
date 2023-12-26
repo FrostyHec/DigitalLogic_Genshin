@@ -24,7 +24,7 @@ module StriptFixer(
 input [7:0] prev_tx, feedback,
 input [5:0] target_machine,
 output reg [7:0] tx,
-output is_fixed
+output reg is_fixed
     );
     parameter first = 2'b00;
     parameter second = 2'b01;
