@@ -99,7 +99,7 @@ WaitScriptHandler ws(
 );
 
 
-parameter cnt=1000;
+parameter cnt=1;//000;
 parameter init_counter=0;
 reg [15:0] counter=init_counter;//1'd0;//if ==0 no sending
 reg has_next=1'b0;

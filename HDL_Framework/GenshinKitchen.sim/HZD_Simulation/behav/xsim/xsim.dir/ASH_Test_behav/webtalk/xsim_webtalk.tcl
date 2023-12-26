@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/ScriptModeTest_behav/webtalk/
+webtalk_init -webtalk_dir D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/ASH_Test_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue Dec 26 22:31:06 2023" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Dec 26 22:16:41 2023" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2017.4 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2086221" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "ec89624a-a262-41a6-bc2a-456a7dbad1b0" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "6bf56228a5c649ff9546cb7f4f01d313" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "160" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "27" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "12th Gen Intel(R) Core(TM) i7-12700H" -context "user_environment"
@@ -22,7 +22,7 @@ webtalk_add_data -client project -key cpu_speed -value "2688 MHz" -context "user
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "16.000 GB" -context "user_environment"
 webtalk_register_client -client xsim
-webtalk_add_data -client xsim -key File_Counter -value "18" -context "xsim\\command_line_options"
+webtalk_add_data -client xsim -key File_Counter -value "3" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Command -value "xelab" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Vhdl2008 -value "false" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key GenDLL -value "false" -context "xsim\\command_line_options"
@@ -30,13 +30,13 @@ webtalk_add_data -client xsim -key SDFModeling -value "false" -context "xsim\\co
 webtalk_add_data -client xsim -key HWCosim -value "false" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key DPI_Used -value "false" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Debug -value "typical" -context "xsim\\command_line_options"
-webtalk_add_data -client xsim -key Simulation_Image_Code -value "114 KB" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Image_Data -value "10 KB" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Image_Code -value "69 KB" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Image_Data -value "3 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Total_Processes -value "120" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Total_Instances -value "18" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Total_Processes -value "26" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Total_Instances -value "3" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "0.17_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "48308_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1668117564 -regid "" -xml D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/ScriptModeTest_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/ScriptModeTest_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/ScriptModeTest_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "0.05_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "48276_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 4076142850 -regid "" -xml D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/ASH_Test_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/ASH_Test_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.sim/HZD_Simulation/behav/xsim/xsim.dir/ASH_Test_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
