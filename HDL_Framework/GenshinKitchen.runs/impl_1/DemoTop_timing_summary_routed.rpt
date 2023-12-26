@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Dec 26 22:03:24 2023
+| Date         : Wed Dec 27 01:10:20 2023
 | Host         : LAPTOP-OLOKS0CM running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file DemoTop_timing_summary_routed.rpt -rpx DemoTop_timing_summary_routed.rpx -warn_on_violation
 | Design       : DemoTop
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 74 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 75 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
  There are 6 register/latch pins with no clock driven by root clock pin: switches[6] (HIGH)
 
@@ -128,7 +128,7 @@ Table of Contents
 
  There is 1 register/latch pin with no clock driven by root clock pin: script_mem_module/script_size_reg[7]/Q (HIGH)
 
- There are 20 register/latch pins with no clock driven by root clock pin: uart_module/io_dataOut_valid_reg/Q (HIGH)
+ There are 21 register/latch pins with no clock driven by root clock pin: uart_module/io_dataOut_valid_reg/Q (HIGH)
 
 
 2. checking constant_clock
@@ -143,7 +143,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 496 pins that are not constrained for maximum delay. (HIGH)
+ There are 498 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -157,7 +157,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 6 ports with no output delay specified. (HIGH)
+ There are 7 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

@@ -64,6 +64,7 @@ module DesignedTop(
       .en(script_en),
       .in(switches),
       .led(led),
+      .led2(led2),
 
       .origin_clk(origin_clk),
       .clk(clk),

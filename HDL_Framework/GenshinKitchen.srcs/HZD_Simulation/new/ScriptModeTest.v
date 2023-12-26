@@ -89,6 +89,34 @@ module  ScriptModeTest(
         // script_mode=1'b0;
         // dataOut_bits=8'b1_00_1100_0;
         // script=16'b0001_0000_000_00_001;
+
+        //script_mode=1'b0;
+        //switches=8'b0000_0000;
+        //dataOut_bits=8'b1_00_1101_0;
+        //script=16'b0000_0000_000_01_011;
+        // #100;
+        // dataOut_valid=1'b0;
+        // dataOut_bits=8'b1_00_1101_0;
+        // #100;
+        // dataOut_valid=1'b1;
+        //script=16'b0000_1000_000_00_001;
+
+
+        // #50
+        // script_mode=1'b0;
+        // switches=8'b0011_0000;
+        // script=16'b0001_0000_000_00_001;
+
+        //operate
+        script_mode=1'b0;
+        #50;
+        dataOut_bits=8'b00_1100_01;
+        switches=8'b0011_0000;
+        script=16'b0001_0000_000_00_001;
+        #200;
+        switches=8'b0001_0000;
+        #100;
+        dataOut_bits=8'b00_1101_01;
         #8000
         $finish;
     end

@@ -4,7 +4,7 @@ module ScriptTop(
     input en,//开启
     //交互输入
     input [7:0] in,
-    output [7:0] led,
+    output [7:0] led,led2,
     //时钟
     input origin_clk,clk,
 
@@ -94,12 +94,15 @@ WaitScriptHandler ws(
     .func(func),
     .signal(signal),
     .i_num(i_num),
-    .feedback(feedback),
+    .feedback({feedback[1:0],feedback[7:2]}),//2:0,7:3
+    .feedback_valid(feedback_valid),
     .isFinished(wait_isFinished)
+
+    ,.led(led2[0])
 );
 
 
-parameter cnt=1000;
+parameter cnt=1;//000;
 parameter init_counter=0;
 reg [15:0] counter=init_counter;//1'd0;//if ==0 no sending
 reg has_next=1'b0;
