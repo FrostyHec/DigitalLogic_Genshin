@@ -16,7 +16,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/Digital
 INFO: [VRFC 10-311] analyzing module OperationEncoder
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ScriptTop
-INFO: [VRFC 10-2458] undeclared symbol signal, assumed default net type wire [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:84]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module SwitchStateEncoder
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetMachineDecoder.v" into library xil_defaultlib

@@ -77,11 +77,23 @@ module DemoTop(
 
   wire clk_slow;
     DelayClock c(.clk(clk),.out(uart_clk_16));
+
+    wire [7:0] fix_switches;
+    wire [5:0] fix_button;
+    SwitchesDebounce sd(
+      .button(button),
+      .switches(switches),
+      .clk(clk),
+      .rst_n(rst_n),
+      .fix_button(fix_button),
+      .fix_switches(fix_switches)
+    );
+
     DesignedTop dst(
     .origin_clk(clk),
     .clk(uart_clk_16),
-    .button(button),
-    .switches(switches),
+    .button(fix_button),
+    .switches(fix_switches),
     .led(led),
     .led2(led2),
 

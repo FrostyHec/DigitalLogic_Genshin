@@ -49,13 +49,16 @@ wire game_state_has_next;
 reg [7:0] send_out={`Sender_Data_Ignore,`Sender_Channel_Ignore};
 assign f_send_out=send_out;
 reg is_fixed=1'b0;
-//wire is_fixed;
+
+// wire is_fixed;
 // ScriptFixer sf(
 //     .prev_tx(send_out),
 //     .feedback(feedback),
 //     .target_machine(target_machine),
 //     .tx(f_send_out),
 //     .is_fixed(is_fixed)
+    
+//     ,.led(led2)
 // );
 
 GameStateScriptHandler gs(
@@ -90,6 +93,7 @@ ActionScriptHandler as(
     //,.led(led[7])
 );
 wire [7:0] jump_next_line;
+wire jump_activation;
 JumpScriptHandler js(
     .clk(clk),
     .en(1'b1),
@@ -97,7 +101,9 @@ JumpScriptHandler js(
     .signal(i_sign),
     .i_num(i_num),
     .feedback(feedback),
-    .next_line(jump_next_line)
+    .feedback_valid(feedback_valid),
+    .next_line(jump_next_line),
+    .activation(jump_activation)
 );
 wire wait_isFinished;
 reg wait_enable=1'b0;
@@ -187,10 +193,14 @@ always @(posedge clk) begin
                 end
             end
             `Script_Jump: begin
-                pc<=pc+2*jump_next_line-2;
-                has_next<=1'b0;
-                new_script<=1'b0;
-                counter<=0;//不用计数
+                if(jump_activation) begin
+                    pc<=pc+2*jump_next_line-2;
+                    has_next<=1'b0;
+                    new_script<=1'b0;
+                    counter<=0;//不用计数
+                end else begin
+                    illegal_code<=1'b1;
+                end
             end
             `Script_Wait: begin
                 if(wait_isFinished) begin

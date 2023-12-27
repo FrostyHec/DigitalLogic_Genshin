@@ -15,7 +15,7 @@ output reg key_value
 //爬的网上的代码，自己稍微修改了一下
 
 //period可以更改，即为希望多少个周期判断一次，这里应该是100ms
-parameter period = 1000000;
+parameter period = 500000;
 reg [31:0] delay_cnt;
 reg key_reg;
 

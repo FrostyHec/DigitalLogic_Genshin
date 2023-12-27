@@ -5,8 +5,8 @@
 //比如我要拿state状态时，我就写switches[`In_Switch_state]即可
 `define In_Switch_GameStart 0
 `define In_Switch_GameEnd 1
-`define In_Switch_TargetUp 6
-`define In_Switch_TargetDown 7
+`define In_Switch_TargetUp 2
+`define In_Switch_TargetDown 3
 `define In_Switch_StepMode 4
 `define In_Switch_Step 5
 

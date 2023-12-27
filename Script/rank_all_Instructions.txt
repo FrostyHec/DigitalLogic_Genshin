@@ -8,6 +8,8 @@ get 3
 put 8
 interact 8
 waituntil target_ready
+get 8
+put 8
 interact 8
 jumpif target_ready 2
 waituntil target_ready
