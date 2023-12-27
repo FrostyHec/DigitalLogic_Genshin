@@ -54,7 +54,7 @@
 		~      & 部分文档攥写工作                                            \\
 		\hline
 	\end{tabular}
-	\caption{详细工作安排}
+	\caption{具体工作安排}
 \end{table}
 
 \subsection{开发计划日程安排和实施情况}
@@ -62,10 +62,16 @@
 \section{系统功能列表}
 手动模式
 \begin{enumerate}
-	\item 通过拨码开关，按钮等实现get，put，move，interact，throw，change taget machine等操作。
+	\item 拨动拨码0，可以开始游戏。玩家可以通过按钮进行各种操作。如果当前正处于脚本模式，则会直接进入手动模式
+	\item 通过按钮，玩家可以进行实现get，put，move，interact，throw，change taget machine等操作。
+	\item 拨动拨码1，可以结束游戏。为了防止拨码接触不良，设计了“双保险”。
 	\item 可以自动过滤掉非法的操作。
+\end{enumerate}
+
+脚本模式
+\begin{enumerate}
 	\item 通过拨码可以实现手动模式与脚本模式的切换。
-	\item 通过输入脚本，
+	\item 通过输入脚本，可以实现get，put，interact，throw，wait，jump等操作。
 	\item 脚本模式中，可以使用拨码开关进行单步调试。
 \end{enumerate}
 
