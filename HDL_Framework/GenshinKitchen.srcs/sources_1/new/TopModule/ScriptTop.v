@@ -23,7 +23,7 @@ module ScriptTop(
     output reg new_target_machine_activate=1'b0,
 
     //输出信号到厨房
-    output reg [7:0] send_out={`Sender_Data_Ignore,`Sender_Channel_Ignore},
+    output [7:0] f_send_out,
 
 
     //测试输出
@@ -45,6 +45,19 @@ wire [7:0] i_num=script[15:8];
 wire [7:0] game_state_tx;
 wire game_state_activation;
 wire game_state_has_next;
+
+reg [7:0] send_out={`Sender_Data_Ignore,`Sender_Channel_Ignore};
+assign f_send_out=send_out;
+reg is_fixed=1'b0;
+//wire is_fixed;
+// ScriptFixer sf(
+//     .prev_tx(send_out),
+//     .feedback(feedback),
+//     .target_machine(target_machine),
+//     .tx(f_send_out),
+//     .is_fixed(is_fixed)
+// );
+
 GameStateScriptHandler gs(
     .en(1'b1),
     .func(func),
@@ -81,7 +94,7 @@ JumpScriptHandler js(
     .clk(clk),
     .en(1'b1),
     .func(func),
-    .signal(signal),
+    .signal(i_sign),
     .i_num(i_num),
     .feedback(feedback),
     .next_line(jump_next_line)
@@ -92,17 +105,17 @@ WaitScriptHandler ws(
     .clk(origin_clk),
     .en(wait_enable),
     .func(func),
-    .signal(signal),
+    .signal(i_sign),
     .i_num(i_num),
-    .feedback({feedback[1:0],feedback[7:2]}),//2:0,7:3
+    .feedback(feedback),//2:0,7:3
     .feedback_valid(feedback_valid),
     .isFinished(wait_isFinished)
 
-    ,.led(led2[0])
+    //,.led(led2[0])
 );
 
 
-parameter cnt=100;//000;
+parameter cnt=1;//000;
 parameter init_counter=0;
 reg [15:0] counter=init_counter;//1'd0;//if ==0 no sending
 reg has_next=1'b0;
@@ -119,7 +132,7 @@ reg is_pressed=1'b0;
 reg on=1'b0;//??????????????????????????????????????????????????????????????????//
 //assign led[4]=on;
 //assign led[2]=has_next;
-wire [1:0] state ={(counter==init_counter)&&feedback_valid,~has_next&&~new_script};//feedback是否满足？
+wire [1:0] state ={(counter==init_counter)&&feedback_valid,~has_next&&~is_fixed&&~new_script};//feedback是否满足？
 //assign led[1:0]=state;
 always @(posedge clk) begin
     if(en) begin//需要enable

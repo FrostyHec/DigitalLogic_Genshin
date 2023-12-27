@@ -10,12 +10,12 @@ get 5
 throw 11
 
 get 8
-put 13
+put 12
 get 14
-put 13
+put 12
 get 14
-put 13
-interact 13
+put 12
+interact 12
 
 get 1
 put 8
@@ -59,7 +59,7 @@ get 3
 put 8
 interact 8
 
-get 13
+get 12
 put 18
 get 19
 put 18
