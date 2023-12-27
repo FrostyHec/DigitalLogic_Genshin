@@ -79,7 +79,7 @@ module DesignedTop(
       .new_target_machine(script_new_state),
       .new_target_machine_activate(sc_new_state_activate),
 
-      .send_out(script_tx),
+      .f_send_out(script_tx),
       .illegal_code(illegal_code)
 
       //test
@@ -148,7 +148,7 @@ module DesignedTop(
     //led
     assign led[3:0]=next_out[5:2];
     assign led[7]=current_script;
-    //assign led2=dataOut_valid;
+    //assign led2=dataOut_bits;
     //assign led[1]=dataOut_valid;
     //assign led[0]=illegal_code;
     //assign led[6:0]=dataIn_bits[6:0];

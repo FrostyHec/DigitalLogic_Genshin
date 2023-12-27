@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed Dec 27 01:49:52 2023
+| Date         : Wed Dec 27 21:33:37 2023
 | Host         : LAPTOP-OLOKS0CM running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file DemoTop_control_sets_placed.rpt
 | Design       : DemoTop
@@ -23,7 +23,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    30 |
-| Unused register locations in slices containing registers |    94 |
+| Unused register locations in slices containing registers |    87 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,66 +33,65 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              79 |           34 |
+| No           | No                    | No                     |              79 |           35 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              70 |           19 |
-| Yes          | No                    | No                     |              83 |           28 |
+| Yes          | No                    | No                     |              83 |           25 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              34 |           10 |
+| Yes          | Yes                   | No                     |              33 |            9 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------+-------------------------------------+-----------------------------------------+------------------+----------------+
-|               Clock Signal              |            Enable Signal            |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
-+-----------------------------------------+-------------------------------------+-----------------------------------------+------------------+----------------+
-|  dst/sse/switch_init_reg_i_1_n_1        |                                     | switches_IBUF[0]                        |                1 |              1 |
-|  script_mem_module/enable3_out          |                                     |                                         |                1 |              1 |
-|  clk_IBUF_BUFG                          | dst/sp/ws/u/led0_out                | dst/sp/ws/u/led_i_1_n_1                 |                1 |              1 |
-|  out_BUFG                               | dst/sp/is_pressed5_out              |                                         |                1 |              1 |
-|  dst/sse/current_script_reg_i_1_n_1     |                                     | switches_IBUF[0]                        |                1 |              1 |
-|  script_mem_module/send_out_reg[4]_0[0] |                                     |                                         |                1 |              2 |
-|  clk_IBUF_BUFG                          |                                     |                                         |                2 |              2 |
-|  out_BUFG                               |                                     | uart_module/rx/spacing                  |                1 |              4 |
-|  out_BUFG                               | script_mem_module/send_out_reg[4]   |                                         |                1 |              4 |
-|  out_BUFG                               | script_mem_module/send_out_reg[4]   | script_mem_module/send_out_reg[7]       |                1 |              4 |
-|  out_BUFG                               | uart_module/rx/state[3]_i_1_n_1     |                                         |                1 |              4 |
-|  out_BUFG                               | uart_module/script_cnt              |                                         |                2 |              4 |
-|  out_BUFG                               | uart_module/script_cnt              | script_mem_module/script_cnt[3]_i_1_n_1 |                2 |              4 |
-|  dst/trg/E[0]                           |                                     |                                         |                2 |              6 |
-|  out_BUFG                               | dst/mt/tsm/available_for_encoder    |                                         |                2 |              6 |
-|  out_BUFG                               | dst/mt/state_reg[5]                 |                                         |                1 |              6 |
-|  dst/mt/tsm/next_state_reg[5]_i_2_n_1   |                                     |                                         |                2 |              6 |
-|  out_BUFG                               | dst/script_en                       |                                         |                2 |              7 |
-|  out_BUFG                               | dst/sp/pc[7]_i_1_n_1                |                                         |                4 |              7 |
-|  clk_IBUF_BUFG                          | dst/sp/ws/u/i_0                     |                                         |                2 |              8 |
-|  out_BUFG                               | uart_module/rx/tick                 |                                         |                4 |              8 |
-|  out_BUFG                               | uart_module/E[0]                    |                                         |                2 |              8 |
-|  out_BUFG                               | dst/mt/prev_tx[7]_i_1_n_1           |                                         |                4 |              8 |
-|  out_BUFG                               | dst/mt/prev_op_activated[9]_i_2_n_1 | dst/mt/prev_op_activated[9]_i_1_n_1     |                3 |             10 |
-|  out_BUFG                               | uart_module/tx/state[3]_i_1__0_n_1  |                                         |                2 |             12 |
-|  uart_module/dataOut_valid              |                                     |                                         |                4 |             14 |
-|  out_BUFG                               | dst/sp/counter[15]_i_2_n_1          | dst/sp/counter[15]_i_1_n_1              |                3 |             15 |
-|  clk_IBUF_BUFG                          |                                     | c/clear                                 |                8 |             32 |
-|  clk_IBUF_BUFG                          |                                     | dst/sp/ws/u/i_0                         |                8 |             32 |
-|  out_BUFG                               |                                     |                                         |               22 |             48 |
-+-----------------------------------------+-------------------------------------+-----------------------------------------+------------------+----------------+
++---------------------------------------+-------------------------------------+-----------------------------------------+------------------+----------------+
+|              Clock Signal             |            Enable Signal            |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
++---------------------------------------+-------------------------------------+-----------------------------------------+------------------+----------------+
+|  script_mem_module/enable3_out        |                                     |                                         |                1 |              1 |
+|  out_BUFG                             | dst/sp/is_pressed1_out              |                                         |                1 |              1 |
+|  dst/sse/switch_init_reg_i_1_n_0      |                                     | switches_IBUF[0]                        |                1 |              1 |
+|  dst/sse/current_script_reg_i_1_n_0   |                                     | switches_IBUF[0]                        |                1 |              1 |
+|  script_mem_module/has_next_reg[0]    |                                     |                                         |                1 |              2 |
+|  clk_IBUF_BUFG                        |                                     |                                         |                2 |              2 |
+|  out_BUFG                             |                                     | uart_module/rx/spacing                  |                1 |              4 |
+|  out_BUFG                             | uart_module/rx/state[3]_i_1_n_0     |                                         |                1 |              4 |
+|  out_BUFG                             | uart_module/script_cnt              |                                         |                2 |              4 |
+|  out_BUFG                             | uart_module/script_cnt              | script_mem_module/script_cnt[3]_i_1_n_0 |                1 |              4 |
+|  out_BUFG                             | dst/sp/send_out_0                   |                                         |                2 |              4 |
+|  out_BUFG                             | dst/sp/send_out_0                   | dst/sp/send_out[7]_i_1_n_0              |                1 |              4 |
+|  out_BUFG                             | dst/mt/tsm/available_for_encoder    |                                         |                1 |              6 |
+|  out_BUFG                             | dst/mt/state_reg[5]                 |                                         |                1 |              6 |
+|  dst/mt/tsm/next_state_reg[5]_i_2_n_0 |                                     |                                         |                3 |              6 |
+|  dst/trg/E[0]                         |                                     |                                         |                2 |              6 |
+|  uart_module/dataOut_valid            |                                     |                                         |                4 |              7 |
+|  out_BUFG                             | dst/sp/pc[7]_i_1_n_0                |                                         |                3 |              7 |
+|  out_BUFG                             | dst/script_en                       |                                         |                2 |              7 |
+|  uart_module/send_out_reg[7][0]       |                                     |                                         |                3 |              7 |
+|  clk_IBUF_BUFG                        | dst/sp/ws/u/i[7]_i_1_n_0            |                                         |                3 |              8 |
+|  out_BUFG                             | uart_module/rx/tick                 |                                         |                2 |              8 |
+|  out_BUFG                             | uart_module/E[0]                    |                                         |                3 |              8 |
+|  out_BUFG                             | dst/mt/prev_tx[7]_i_1_n_0           |                                         |                2 |              8 |
+|  out_BUFG                             | dst/mt/prev_op_activated[9]_i_2_n_0 | dst/mt/prev_op_activated[9]_i_1_n_0     |                3 |             10 |
+|  out_BUFG                             | uart_module/tx/state[3]_i_1__0_n_0  |                                         |                2 |             12 |
+|  out_BUFG                             | dst/sp/counter[15]_i_2_n_0          | dst/sp/counter[15]_i_1_n_0              |                4 |             15 |
+|  clk_IBUF_BUFG                        |                                     | c/clear                                 |                8 |             32 |
+|  clk_IBUF_BUFG                        |                                     | dst/sp/ws/u/i[7]_i_1_n_0                |                8 |             32 |
+|  out_BUFG                             |                                     |                                         |               19 |             48 |
++---------------------------------------+-------------------------------------+-----------------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     5 |
+| 1      |                     4 |
 | 2      |                     2 |
 | 4      |                     6 |
 | 6      |                     4 |
-| 7      |                     2 |
+| 7      |                     4 |
 | 8      |                     4 |
 | 10     |                     1 |
 | 12     |                     1 |
-| 14     |                     1 |
 | 15     |                     1 |
 | 16+    |                     3 |
 +--------+-----------------------+

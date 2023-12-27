@@ -20,12 +20,7 @@ always @* begin
     new_state_activate=1'b0;
     if (en&feedback_valid) begin//?
         if (target_machine==will_machine) begin
-            if(func==`Script_Operate_Throw) begin
-                activation = 1'b1;
-                has_next = 1'b0;
-                tx = {`Sender_Operation_Throw,`Sender_Channel_Operate};
-            end 
-            else if(feedback[2]) begin//`Receiver_Feedback_InfrontTargetMachine
+            if(feedback[2]) begin//`Receiver_Feedback_InfrontTargetMachine
                 led=1'b1;
                 activation = 1'b1;
                 has_next = 1'b0;
@@ -44,16 +39,22 @@ always @* begin
                     end
                 endcase
             end else begin
-                activation = 1'b1;
-                has_next = 1'b1;
-                tx = {`Sender_Operation_Move,`Sender_Channel_Operate};  
+                if(func==`Script_Operate_Throw) begin//make 脚本 miss
+                    activation = 1'b1;
+                    has_next = 1'b0;
+                    tx = {`Sender_Operation_Throw,`Sender_Channel_Operate};
+                end else begin
+                    activation = 1'b1;
+                    has_next = 1'b1;
+                    tx = {`Sender_Operation_Move,`Sender_Channel_Operate};  
+                end
             end
         end else begin
-            activation = 1'b1;
-            has_next = 1'b1;
-            tx = {will_machine, `Sender_Channel_TargetMachineChanged};
-            new_state=will_machine;
-            new_state_activate=1'b1;
+                activation = 1'b1;
+                has_next = 1'b1;
+                tx = {will_machine, `Sender_Channel_TargetMachineChanged};
+                new_state=will_machine;
+                new_state_activate=1'b1;
         end
     end else begin
         activation=1'b0;

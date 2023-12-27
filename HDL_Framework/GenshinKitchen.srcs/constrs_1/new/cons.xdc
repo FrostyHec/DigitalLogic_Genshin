@@ -67,9 +67,10 @@ set_property PACKAGE_PIN L1 [get_ports {led2[2]}]
 set_property PACKAGE_PIN M1 [get_ports {led2[1]}]
 set_property PACKAGE_PIN K3 [get_ports {led2[0]}]
 
-set_property IOSTANDARD LVCMOS33 [get_ports {button[5]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {button[6]}]
 
 
 set_property IOSTANDARD LVCMOS33 [get_ports rst_n]
 set_property PACKAGE_PIN P15 [get_ports rst_n]
+
+
+

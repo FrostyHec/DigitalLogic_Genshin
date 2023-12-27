@@ -75,9 +75,8 @@ module DemoTop(
           .io_dataOut_valid(dataOut_valid)  // referring (b)
         );
 
-    //assign uart_clk_16=clk;
+  wire clk_slow;
     DelayClock c(.clk(clk),.out(uart_clk_16));
-
     DesignedTop dst(
     .origin_clk(clk),
     .clk(uart_clk_16),

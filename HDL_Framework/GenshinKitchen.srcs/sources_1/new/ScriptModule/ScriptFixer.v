@@ -20,7 +20,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module StriptFixer(
+module ScriptFixer(
 input [7:0] prev_tx, feedback,
 input [5:0] target_machine,
 output reg [7:0] tx,
@@ -75,6 +75,7 @@ output reg is_fixed
                 is_fixed = 1'b0;
             end
         end else 
+            tx=prev_tx;
             is_fixed = 1'b0;
     end
 endmodule
