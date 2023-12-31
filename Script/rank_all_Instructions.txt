@@ -1,5 +1,6 @@
 jumpifnot player_hasitem 2
 throw 20
+
 get 8
 jumpifnot player_hasitem 2
 throw 20
@@ -42,4 +43,3 @@ get 3
 wait 20
 put 19
 game end
-
