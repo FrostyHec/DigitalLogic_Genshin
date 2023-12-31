@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Thu Dec 28 00:41:57 2023
+| Date             : Fri Dec 29 12:51:35 2023
 | Host             : LAPTOP-OLOKS0CM running 64-bit major release  (build 9200)
 | Command          : report_power -file DemoTop_power_routed.rpt -pb DemoTop_power_summary_routed.pb -rpx DemoTop_power_routed.rpx
 | Design           : DemoTop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 7.415        |
+| Total On-Chip Power (W)  | 9.211        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 7.309        |
-| Device Static (W)        | 0.105        |
+| Dynamic (W)              | 9.087        |
+| Device Static (W)        | 0.124        |
 | Effective TJA (C/W)      | 4.8          |
-| Max Ambient (C)          | 49.6         |
-| Junction Temperature (C) | 60.4         |
+| Max Ambient (C)          | 41.0         |
+| Junction Temperature (C) | 69.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     3.794 |     1374 |       --- |             --- |
-|   LUT as Logic |     3.169 |      497 |     20800 |            2.39 |
-|   CARRY4       |     0.364 |       72 |      8150 |            0.88 |
-|   Register     |     0.208 |      477 |     41600 |            1.15 |
+| Slice Logic    |     4.987 |     1946 |       --- |             --- |
+|   LUT as Logic |     4.035 |      699 |     20800 |            3.36 |
+|   CARRY4       |     0.568 |      112 |      8150 |            1.37 |
+|   Register     |     0.331 |      647 |     41600 |            1.56 |
 |   BUFG         |     0.053 |        3 |        32 |            9.38 |
-|   Others       |     0.000 |       54 |       --- |             --- |
-| Signals        |     1.907 |      835 |       --- |             --- |
+|   Others       |     0.000 |       63 |       --- |             --- |
+| Signals        |     2.364 |     1064 |       --- |             --- |
 | Block RAM      |     0.494 |      0.5 |        50 |            1.00 |
-| I/O            |     1.115 |       31 |       210 |           14.76 |
-| Static Power   |     0.105 |          |           |                 |
-| Total          |     7.415 |          |           |                 |
+| I/O            |     1.242 |       31 |       210 |           14.76 |
+| Static Power   |     0.124 |          |           |                 |
+| Total          |     9.211 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     6.243 |       6.206 |      0.037 |
-| Vccaux    |       1.800 |     0.055 |       0.039 |      0.015 |
-| Vcco33    |       3.300 |     0.303 |       0.302 |      0.001 |
+| Vccint    |       1.000 |     7.909 |       7.856 |      0.052 |
+| Vccaux    |       1.800 |     0.061 |       0.044 |      0.017 |
+| Vcco33    |       3.300 |     0.339 |       0.338 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,37 +139,42 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| DemoTop                                        |     7.309 |
-|   c                                            |     0.086 |
-|   dst                                          |     0.799 |
-|     mt                                         |     0.226 |
+| DemoTop                                        |     9.087 |
+|   c                                            |     0.095 |
+|   dst                                          |     0.828 |
+|     mt                                         |     0.156 |
 |       gs                                       |    <0.001 |
-|       tsm                                      |     0.020 |
-|     sp                                         |     0.287 |
-|       as                                       |     0.074 |
+|       tsm                                      |     0.013 |
+|     sp                                         |     0.421 |
+|       as                                       |     0.080 |
 |       gs                                       |     0.002 |
-|       js                                       |     0.069 |
-|       ws                                       |     0.057 |
-|         u                                      |     0.057 |
-|     sse                                        |     0.023 |
-|     trg                                        |     0.244 |
-|   script_mem_module                            |     0.999 |
-|     ram_module                                 |     0.717 |
-|       U0                                       |     0.717 |
-|         inst_blk_mem_gen                       |     0.717 |
-|           gnbram.gnativebmg.native_blk_mem_gen |     0.717 |
-|             valid.cstr                         |     0.717 |
-|               ramloop[0].ram.r                 |     0.717 |
-|                 prim_noinit.ram                |     0.717 |
-|   sd                                           |     3.761 |
-|     s0                                         |     0.680 |
-|     s1                                         |     0.551 |
-|     s2                                         |     0.633 |
-|     s3                                         |     0.637 |
-|     s4                                         |     0.638 |
-|     s5                                         |     0.622 |
-|   uart_module                                  |     0.278 |
-|     rx                                         |     0.168 |
+|       js                                       |     0.071 |
+|       ws                                       |     0.067 |
+|         u                                      |     0.067 |
+|     sse                                        |     0.026 |
+|     trg                                        |     0.203 |
+|   script_mem_module                            |     0.980 |
+|     ram_module                                 |     0.682 |
+|       U0                                       |     0.682 |
+|         inst_blk_mem_gen                       |     0.682 |
+|           gnbram.gnativebmg.native_blk_mem_gen |     0.682 |
+|             valid.cstr                         |     0.682 |
+|               ramloop[0].ram.r                 |     0.682 |
+|                 prim_noinit.ram                |     0.682 |
+|   sd                                           |     5.323 |
+|     b0                                         |     0.517 |
+|     b1                                         |     0.505 |
+|     b2                                         |     0.498 |
+|     b3                                         |     0.510 |
+|     b4                                         |     0.503 |
+|     s0                                         |     0.157 |
+|     s1                                         |     0.524 |
+|     s2                                         |     0.530 |
+|     s3                                         |     0.551 |
+|     s4                                         |     0.525 |
+|     s5                                         |     0.503 |
+|   uart_module                                  |     0.293 |
+|     rx                                         |     0.170 |
 |     tx                                         |     0.029 |
 +------------------------------------------------+-----------+
 

@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Dec 28 00:40:57 2023
-# Process ID: 984
+# Start of session at: Fri Dec 29 12:50:32 2023
+# Process ID: 14088
 # Current directory: D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1
 # Command line: vivado.exe -log DemoTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoTop.tcl
 # Log file: D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.vds
@@ -15,14 +15,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21372 
+INFO: Helper process launched with PID 11780 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 388.992 ; gain = 98.945
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 388.500 ; gain = 98.234
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DemoTop' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:23]
 INFO: [Synth 8-638] synthesizing module 'ScriptMem' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:23]
-INFO: [Synth 8-638] synthesizing module 'inst_ram' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-984-LAPTOP-OLOKS0CM/realtime/inst_ram_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'inst_ram' (1#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-984-LAPTOP-OLOKS0CM/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'inst_ram' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-14088-LAPTOP-OLOKS0CM/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'inst_ram' (1#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-14088-LAPTOP-OLOKS0CM/realtime/inst_ram_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'ScriptMem' (2#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:23]
 INFO: [Synth 8-638] synthesizing module 'UART' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:128]
 INFO: [Synth 8-638] synthesizing module 'UARTTransmitter' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:3]
@@ -30,11 +30,17 @@ INFO: [Synth 8-256] done synthesizing module 'UARTTransmitter' (3#1) [D:/Compute
 INFO: [Synth 8-638] synthesizing module 'UARTReceiver' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:46]
 INFO: [Synth 8-256] done synthesizing module 'UARTReceiver' (4#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:46]
 INFO: [Synth 8-256] done synthesizing module 'UART' (5#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:128]
-INFO: [Synth 8-638] synthesizing module 'DelayClock' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:1]
-INFO: [Synth 8-256] done synthesizing module 'DelayClock' (6#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:1]
+INFO: [Synth 8-638] synthesizing module 'DelayClock' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:3]
+	Parameter init bound to: 32'sb00000000000000000000000000000000 
+	Parameter div bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DelayClock' (6#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:3]
 INFO: [Synth 8-638] synthesizing module 'SwitchesDebounce' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:23]
 INFO: [Synth 8-638] synthesizing module 'key_debounce' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:8]
-	Parameter period bound to: 1000000 - type: integer 
+	Parameter period bound to: 5000 - type: integer 
+	Parameter init bound to: 32'sb00000000000000000000000000000000 
+	Parameter key_true bound to: 1'b1 
+	Parameter div bound to: 1 - type: integer 
+	Parameter key_false bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'key_debounce' (7#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:8]
 WARNING: [Synth 8-350] instance 's0' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:32]
 WARNING: [Synth 8-350] instance 's1' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:38]
@@ -44,22 +50,29 @@ WARNING: [Synth 8-350] instance 's4' of module 'key_debounce' requires 5 connect
 WARNING: [Synth 8-350] instance 's5' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:62]
 WARNING: [Synth 8-350] instance 's6' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:68]
 WARNING: [Synth 8-350] instance 's7' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:74]
+WARNING: [Synth 8-350] instance 'b0' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:83]
+WARNING: [Synth 8-350] instance 'b1' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:90]
+WARNING: [Synth 8-350] instance 'b2' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:97]
+WARNING: [Synth 8-350] instance 'b3' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:104]
+WARNING: [Synth 8-350] instance 'b4' of module 'key_debounce' requires 5 connections, but only 4 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:111]
 INFO: [Synth 8-256] done synthesizing module 'SwitchesDebounce' (8#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/SwitchesDebounce.v:23]
-WARNING: [Synth 8-689] width (6) of port connection 'fix_button' does not match port width (5) of module 'SwitchesDebounce' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:88]
+WARNING: [Synth 8-689] width (6) of port connection 'fix_button' does not match port width (5) of module 'SwitchesDebounce' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:89]
 INFO: [Synth 8-638] synthesizing module 'DesignedTop' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
 INFO: [Synth 8-638] synthesizing module 'ManualTop' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:5]
-INFO: [Synth 8-638] synthesizing module 'TargetStateMachine' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:24]
+	Parameter counter_init bound to: 10'b0000000001 
+	Parameter counter_div bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'TargetStateMachine' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:25]
 	Parameter no_press bound to: 2'b00 
 	Parameter target_up bound to: 1 - type: integer 
 	Parameter target_down bound to: 0 - type: integer 
-WARNING: [Synth 8-567] referenced signal 'en' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:46]
-WARNING: [Synth 8-567] referenced signal 'state' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:46]
-INFO: [Synth 8-256] done synthesizing module 'TargetStateMachine' (9#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:24]
+WARNING: [Synth 8-567] referenced signal 'en' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:49]
+WARNING: [Synth 8-567] referenced signal 'state' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:49]
+INFO: [Synth 8-256] done synthesizing module 'TargetStateMachine' (9#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:25]
 INFO: [Synth 8-638] synthesizing module 'TargetStateEncoder' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v:24]
-WARNING: [Synth 8-567] referenced signal 'state' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v:32]
+WARNING: [Synth 8-567] referenced signal 'state' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v:33]
 INFO: [Synth 8-256] done synthesizing module 'TargetStateEncoder' (10#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateEncoder.v:24]
 INFO: [Synth 8-638] synthesizing module 'GameStateEncoder' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v:24]
-WARNING: [Synth 8-567] referenced signal 'enable' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v:40]
+WARNING: [Synth 8-567] referenced signal 'enable' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v:50]
 INFO: [Synth 8-256] done synthesizing module 'GameStateEncoder' (11#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v:24]
 INFO: [Synth 8-638] synthesizing module 'OperationEncoder' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/OperationEncoder.v:24]
 INFO: [Synth 8-256] done synthesizing module 'OperationEncoder' (12#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/OperationEncoder.v:24]
@@ -72,42 +85,54 @@ INFO: [Synth 8-638] synthesizing module 'ManualFliter' [D:/ComputerScience/Proje
 INFO: [Synth 8-638] synthesizing module 'TargetMachineThrowable' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetMachineDecoder.v:25]
 INFO: [Synth 8-256] done synthesizing module 'TargetMachineThrowable' (13#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetMachineDecoder.v:25]
 INFO: [Synth 8-256] done synthesizing module 'ManualFliter' (14#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/ManualFliter.v:28]
-WARNING: [Synth 8-6014] Unused sequential element prev_send_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:91]
-WARNING: [Synth 8-3848] Net led in module/entity ManualTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:15]
-WARNING: [Synth 8-3848] Net led2 in module/entity ManualTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:15]
+WARNING: [Synth 8-6014] Unused sequential element prev_send_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:97]
+WARNING: [Synth 8-3848] Net led in module/entity ManualTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:19]
+WARNING: [Synth 8-3848] Net led2 in module/entity ManualTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:19]
 INFO: [Synth 8-256] done synthesizing module 'ManualTop' (15#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:5]
-WARNING: [Synth 8-350] instance 'mt' of module 'ManualTop' requires 13 connections, but only 11 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:42]
+WARNING: [Synth 8-350] instance 'mt' of module 'ManualTop' requires 13 connections, but only 12 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:34]
 INFO: [Synth 8-638] synthesizing module 'ScriptTop' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:3]
 	Parameter cnt bound to: 1 - type: integer 
 	Parameter init_counter bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'GameStateScriptHandler' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v:3]
-INFO: [Synth 8-256] done synthesizing module 'GameStateScriptHandler' (16#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v:3]
-WARNING: [Synth 8-350] instance 'gs' of module 'GameStateScriptHandler' requires 9 connections, but only 8 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:64]
-INFO: [Synth 8-638] synthesizing module 'ActionScriptHandler' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:3]
-INFO: [Synth 8-256] done synthesizing module 'ActionScriptHandler' (17#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:3]
-WARNING: [Synth 8-350] instance 'as' of module 'ActionScriptHandler' requires 14 connections, but only 12 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:79]
-INFO: [Synth 8-638] synthesizing module 'JumpScriptHandler' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/JumpScriptHandler.v:5]
-INFO: [Synth 8-256] done synthesizing module 'JumpScriptHandler' (18#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/JumpScriptHandler.v:5]
+	Parameter counter_envoke bound to: 1 - type: integer 
+	Parameter load_script bound to: 2'b11 
+	Parameter analyze_script bound to: 2'b10 
+	Parameter next_line_pc bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'GameStateScriptHandler' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v:4]
+INFO: [Synth 8-256] done synthesizing module 'GameStateScriptHandler' (16#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v:4]
+WARNING: [Synth 8-350] instance 'gs' of module 'GameStateScriptHandler' requires 9 connections, but only 8 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:54]
+INFO: [Synth 8-638] synthesizing module 'ActionScriptHandler' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:4]
+INFO: [Synth 8-226] default block is never used [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:33]
+INFO: [Synth 8-256] done synthesizing module 'ActionScriptHandler' (17#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:4]
+WARNING: [Synth 8-350] instance 'as' of module 'ActionScriptHandler' requires 13 connections, but only 12 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:70]
+INFO: [Synth 8-638] synthesizing module 'JumpScriptHandler' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/JumpScriptHandler.v:4]
+	Parameter next_one bound to: 8'b00000001 
+	Parameter func_zero bound to: 0 - type: integer 
+	Parameter func_one bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'JumpScriptHandler' (18#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/JumpScriptHandler.v:4]
 INFO: [Synth 8-638] synthesizing module 'WaitScriptHandler' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/WaitScriptHadnler.v:4]
-INFO: [Synth 8-638] synthesizing module 'Wait' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:3]
+INFO: [Synth 8-638] synthesizing module 'Wait' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:4]
 	Parameter period bound to: 20000000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Wait' (19#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:3]
+	Parameter init_i bound to: 8'b00000000 
+	Parameter init_cnt bound to: 0 - type: integer 
+	Parameter div bound to: 1 - type: integer 
+	Parameter dec bound to: 1 - type: integer 
+	Parameter finished_true bound to: 1'b1 
+	Parameter finished_false bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'Wait' (19#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:4]
 INFO: [Synth 8-256] done synthesizing module 'WaitScriptHandler' (20#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/WaitScriptHadnler.v:4]
-WARNING: [Synth 8-350] instance 'ws' of module 'WaitScriptHandler' requires 9 connections, but only 8 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:110]
-WARNING: [Synth 8-6014] Unused sequential element on_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:224]
-WARNING: [Synth 8-3848] Net led in module/entity ScriptTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:7]
-WARNING: [Synth 8-3848] Net led2 in module/entity ScriptTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:7]
+WARNING: [Synth 8-3848] Net led in module/entity ScriptTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:8]
+WARNING: [Synth 8-3848] Net led2 in module/entity ScriptTop does not have driver. [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:8]
 INFO: [Synth 8-256] done synthesizing module 'ScriptTop' (21#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:3]
-INFO: [Synth 8-638] synthesizing module 'SwitchStateEncoder' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:3]
-INFO: [Synth 8-256] done synthesizing module 'SwitchStateEncoder' (22#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:3]
+WARNING: [Synth 8-350] instance 'sp' of module 'ScriptTop' requires 17 connections, but only 15 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:54]
+INFO: [Synth 8-638] synthesizing module 'SwitchStateEncoder' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:4]
+INFO: [Synth 8-256] done synthesizing module 'SwitchStateEncoder' (22#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:4]
 INFO: [Synth 8-638] synthesizing module 'TargetRegister' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/TargetRegister.v:24]
 INFO: [Synth 8-256] done synthesizing module 'TargetRegister' (23#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/TargetRegister.v:24]
-WARNING: [Synth 8-567] referenced signal 'current_script' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:127]
-WARNING: [Synth 8-567] referenced signal 'manual_new_state_activate' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:140]
-WARNING: [Synth 8-567] referenced signal 'sc_new_state_activate' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:140]
+WARNING: [Synth 8-567] referenced signal 'current_script' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:113]
+WARNING: [Synth 8-567] referenced signal 'manual_new_state_activate' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:120]
+WARNING: [Synth 8-567] referenced signal 'sc_new_state_activate' should be on the sensitivity list [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:120]
 INFO: [Synth 8-256] done synthesizing module 'DesignedTop' (24#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:4]
-WARNING: [Synth 8-689] width (6) of port connection 'button' does not match port width (5) of module 'DesignedTop' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:95]
-WARNING: [Synth 8-350] instance 'dst' of module 'DesignedTop' requires 19 connections, but only 13 given [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:92]
+WARNING: [Synth 8-689] width (6) of port connection 'button' does not match port width (5) of module 'DesignedTop' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:98]
 INFO: [Synth 8-256] done synthesizing module 'DemoTop' (25#1) [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DemoTop.v:23]
 WARNING: [Synth 8-3331] design SwitchStateEncoder has unconnected port feedback[7]
 WARNING: [Synth 8-3331] design SwitchStateEncoder has unconnected port feedback[6]
@@ -182,6 +207,7 @@ WARNING: [Synth 8-3331] design ScriptTop has unconnected port in[0]
 WARNING: [Synth 8-3331] design ManualFliter has unconnected port feedback[7]
 WARNING: [Synth 8-3331] design ManualFliter has unconnected port feedback[6]
 WARNING: [Synth 8-3331] design ManualFliter has unconnected port feedback[4]
+WARNING: [Synth 8-3331] design ManualFliter has unconnected port feedback_valid
 WARNING: [Synth 8-3331] design OperationEncoder has unconnected port clk
 WARNING: [Synth 8-3331] design ManualTop has unconnected port led[7]
 WARNING: [Synth 8-3331] design ManualTop has unconnected port led[6]
@@ -206,7 +232,7 @@ WARNING: [Synth 8-3331] design ManualTop has unconnected port switches[4]
 WARNING: [Synth 8-3331] design DesignedTop has unconnected port dataIn_ready
 WARNING: [Synth 8-3331] design ScriptMem has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 440.781 ; gain = 150.734
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 439.836 ; gain = 149.570
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -215,16 +241,17 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin mt:feedback_valid to constant 0 [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:34]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 440.781 ; gain = 150.734
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 439.836 ; gain = 149.570
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-984-LAPTOP-OLOKS0CM/dcp3/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
-Finished Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-984-LAPTOP-OLOKS0CM/dcp3/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-14088-LAPTOP-OLOKS0CM/dcp3/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Finished Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-14088-LAPTOP-OLOKS0CM/dcp3/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
 Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 Finished Parsing XDC File [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DemoTop_propImpl.xdc].
@@ -234,60 +261,59 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 774.484 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 775.301 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 774.484 ; gain = 484.438
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 775.301 ; gain = 485.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 774.484 ; gain = 484.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 775.301 ; gain = 485.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 774.484 ; gain = 484.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 775.301 ; gain = 485.035
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "script_size" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element script_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:36]
 INFO: [Synth 8-5544] ROM "spacing" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element spacing_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:59]
 WARNING: [Synth 8-6014] Unused sequential element clkCnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:143]
-WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:7]
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:14]
 INFO: [Synth 8-5545] ROM "key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
+WARNING: [Synth 8-6014] Unused sequential element delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
 INFO: [Synth 8-5546] ROM "tx" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "activation" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "throwable" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "trash_bin" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/ManualFliter.v:96]
-WARNING: [Synth 8-6014] Unused sequential element prev_op_activated_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:82]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/ManualFliter.v:97]
+WARNING: [Synth 8-6014] Unused sequential element prev_op_activated_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:88]
 INFO: [Synth 8-5544] ROM "activation" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "has_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "tx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:19]
-WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:20]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:28]
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:29]
 INFO: [Synth 8-5544] ROM "enable" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "switch_init" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:49]
-WARNING: [Synth 8-327] inferring latch for variable 'tx_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v:43]
-WARNING: [Synth 8-327] inferring latch for variable 'tx_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v:17]
-WARNING: [Synth 8-327] inferring latch for variable 'activation_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v:16]
-WARNING: [Synth 8-327] inferring latch for variable 'tx_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:29]
-WARNING: [Synth 8-327] inferring latch for variable 'has_next_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:26]
-WARNING: [Synth 8-327] inferring latch for variable 'new_state_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:56]
-WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:24]
-WARNING: [Synth 8-327] inferring latch for variable 'next_line_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/JumpScriptHandler.v:23]
-WARNING: [Synth 8-327] inferring latch for variable 'enable_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/WaitScriptHadnler.v:22]
-WARNING: [Synth 8-327] inferring latch for variable 'current_script_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:15]
-WARNING: [Synth 8-327] inferring latch for variable 'switch_init_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:14]
-WARNING: [Synth 8-327] inferring latch for variable 'next_out_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:38]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/TargetStateMachine.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'tx_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ManualModule/GameStateEncoder.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'tx_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'activation_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/GameStateScriptHandler.v:17]
+WARNING: [Synth 8-327] inferring latch for variable 'tx_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:35]
+WARNING: [Synth 8-327] inferring latch for variable 'has_next_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:32]
+WARNING: [Synth 8-327] inferring latch for variable 'new_state_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/ActionScriptHandler.v:65]
+WARNING: [Synth 8-327] inferring latch for variable 'next_line_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/JumpScriptHandler.v:28]
+WARNING: [Synth 8-327] inferring latch for variable 'enable_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/WaitScriptHadnler.v:24]
+WARNING: [Synth 8-327] inferring latch for variable 'current_script_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:16]
+WARNING: [Synth 8-327] inferring latch for variable 'switch_init_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/SwitchStateEncoder.v:15]
+WARNING: [Synth 8-327] inferring latch for variable 'next_out_reg' [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/DesignedTop.v:27]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 774.484 ; gain = 484.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 775.301 ; gain = 485.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -315,15 +341,15 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 4     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 50    
+	                1 Bit    Registers := 64    
 +---Muxes : 
 	   7 Input     16 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 27    
 	   4 Input      8 Bit        Muxes := 1     
-	   5 Input      8 Bit        Muxes := 2     
+	   5 Input      8 Bit        Muxes := 1     
 	   7 Input      7 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
+	   6 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 8     
 	   7 Input      4 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 2     
@@ -332,10 +358,9 @@ Detailed RTL Component Info :
 	   5 Input      3 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 69    
+	   2 Input      1 Bit        Muxes := 76    
 	   3 Input      1 Bit        Muxes := 2     
 	   6 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 6     
 	   7 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -421,6 +446,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module OperationEncoder 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -457,10 +483,8 @@ Module ActionScriptHandler
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
-	   5 Input      8 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 6     
+	   6 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module JumpScriptHandler 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -471,7 +495,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
 Module WaitScriptHandler 
@@ -531,44 +555,56 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element sd/s0/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:48]
-WARNING: [Synth 8-6014] Unused sequential element sd/s1/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:48]
-WARNING: [Synth 8-6014] Unused sequential element sd/s2/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:48]
-WARNING: [Synth 8-6014] Unused sequential element sd/s3/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:48]
-WARNING: [Synth 8-6014] Unused sequential element sd/s4/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:48]
-WARNING: [Synth 8-6014] Unused sequential element sd/s5/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:48]
-WARNING: [Synth 8-6014] Unused sequential element sd/s6/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:48]
-WARNING: [Synth 8-6014] Unused sequential element sd/s6/key_value_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:49]
-WARNING: [Synth 8-6014] Unused sequential element sd/s7/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:48]
-WARNING: [Synth 8-6014] Unused sequential element sd/s7/key_value_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:49]
-WARNING: [Synth 8-6014] Unused sequential element dst/sp/ws/u/led_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:29]
-WARNING: [Synth 8-6014] Unused sequential element dst/sp/illegal_code_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:182]
-INFO: [Synth 8-5544] ROM "dst/sp/as/tx" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "sd/s0/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "sd/s1/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "sd/s2/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "sd/s3/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "sd/s4/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "sd/s5/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element script_mem_module/script_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:36]
-WARNING: [Synth 8-6014] Unused sequential element uart_module/rx/spacing_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:59]
-WARNING: [Synth 8-6014] Unused sequential element uart_module/clkCnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:143]
-WARNING: [Synth 8-6014] Unused sequential element c/counter_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:7]
-WARNING: [Synth 8-6014] Unused sequential element sd/s0/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
-WARNING: [Synth 8-6014] Unused sequential element sd/s1/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
-WARNING: [Synth 8-6014] Unused sequential element sd/s2/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
-WARNING: [Synth 8-6014] Unused sequential element sd/s3/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
-WARNING: [Synth 8-6014] Unused sequential element sd/s4/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
-WARNING: [Synth 8-6014] Unused sequential element sd/s5/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
-WARNING: [Synth 8-6014] Unused sequential element sd/s6/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
-WARNING: [Synth 8-6014] Unused sequential element sd/s7/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:26]
-WARNING: [Synth 8-6014] Unused sequential element dst/mt/prev_op_activated_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:82]
-WARNING: [Synth 8-6014] Unused sequential element dst/sp/ws/u/cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:19]
-WARNING: [Synth 8-6014] Unused sequential element dst/sp/ws/u/i_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:20]
-WARNING: [Synth 8-3331] design DemoTop has unconnected port led[6]
-WARNING: [Synth 8-3331] design DemoTop has unconnected port led[5]
-WARNING: [Synth 8-3331] design DemoTop has unconnected port led[4]
-WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[7]
+WARNING: [Synth 8-6014] Unused sequential element script_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptMem.v:36]
+WARNING: [Synth 8-6014] Unused sequential element rx/spacing_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:59]
+WARNING: [Synth 8-6014] Unused sequential element clkCnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/UART.v:143]
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/DelayClock.v:14]
+WARNING: [Synth 8-6014] Unused sequential element s0/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element s1/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element s2/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element s3/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element s4/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element s5/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element s6/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element s7/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element b0/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element b1/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element b2/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element b3/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+WARNING: [Synth 8-6014] Unused sequential element b4/key_flag_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:52]
+INFO: [Synth 8-5545] ROM "s0/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s1/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s2/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s3/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s4/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s5/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s6/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s7/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "b0/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "b1/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "b2/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "b3/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "b4/key_flag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element s0/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element s1/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element s2/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element s3/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element s4/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element s5/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element s6/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element s7/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element b0/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element b1/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element b2/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element b3/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element b4/delay_cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UtilsModule/key_debounce.v:30]
+WARNING: [Synth 8-6014] Unused sequential element sp/illegal_code_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ScriptTop.v:177]
+WARNING: [Synth 8-6014] Unused sequential element mt/prev_op_activated_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/TopModule/ManualTop.v:88]
+WARNING: [Synth 8-6014] Unused sequential element sp/ws/u/cnt_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:28]
+WARNING: [Synth 8-6014] Unused sequential element sp/ws/u/i_reg was removed.  [D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptModule/Wait.v:29]
+WARNING: [Synth 8-3331] design DesignedTop has unconnected port led[6]
+WARNING: [Synth 8-3331] design DesignedTop has unconnected port led[5]
+WARNING: [Synth 8-3331] design DesignedTop has unconnected port led[4]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'dst/sp/gs/tx_reg[7]' (LD) to 'dst/sp/gs/tx_reg[1]'
 INFO: [Synth 8-3886] merging instance 'dst/sp/gs/tx_reg[6]' (LD) to 'dst/sp/gs/tx_reg[1]'
@@ -583,29 +619,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/g
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/gs/tx_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/gs/tx_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/gs/tx_reg[1] )
-INFO: [Synth 8-3886] merging instance 'dst/mt/gs/prev_tx_reg[6]' (FD) to 'dst/mt/gs/prev_tx_reg[7]'
-INFO: [Synth 8-3886] merging instance 'dst/mt/gs/prev_tx_reg[7]' (FD) to 'dst/mt/gs/prev_tx_reg[5]'
-INFO: [Synth 8-3886] merging instance 'dst/mt/gs/prev_tx_reg[1]' (FD) to 'dst/mt/gs/prev_tx_reg[5]'
-INFO: [Synth 8-3886] merging instance 'dst/mt/gs/prev_tx_reg[4]' (FD) to 'dst/mt/gs/prev_tx_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dst/mt/gs/prev_tx_reg[5] )
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[7]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[6]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[5]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[4]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[3]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[2]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[1]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[0]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/sp/gs/tx_reg[1]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/sp/gs/tx_reg[0]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/sp/gs/activation_reg) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/sp/as/tx_reg[1]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/sp/as/led_reg) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/sp/js/next_line_reg[7]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/next_out_reg[7]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/next_out_reg[6]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/sp/pc_reg[0]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/prev_tx_reg[5]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s6/key_reg_reg) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s6/delay_cnt_reg[0]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s6/delay_cnt_reg[1]) is unused and will be removed from module DemoTop.
@@ -639,6 +652,7 @@ WARNING: [Synth 8-3332] Sequential element (sd/s6/delay_cnt_reg[28]) is unused a
 WARNING: [Synth 8-3332] Sequential element (sd/s6/delay_cnt_reg[29]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s6/delay_cnt_reg[30]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s6/delay_cnt_reg[31]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (sd/s6/key_value_reg) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s7/key_reg_reg) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s7/delay_cnt_reg[0]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s7/delay_cnt_reg[1]) is unused and will be removed from module DemoTop.
@@ -672,8 +686,30 @@ WARNING: [Synth 8-3332] Sequential element (sd/s7/delay_cnt_reg[28]) is unused a
 WARNING: [Synth 8-3332] Sequential element (sd/s7/delay_cnt_reg[29]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s7/delay_cnt_reg[30]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (sd/s7/delay_cnt_reg[31]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (sd/s7/key_value_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[6]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[5]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[4]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/tx_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/sp/gs/tx_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/sp/gs/tx_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/sp/gs/activation_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/sp/as/tx_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/sp/js/next_line_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/next_out_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/next_out_reg[6]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/prev_tx_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/prev_tx_reg[6]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/prev_tx_reg[5]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/prev_tx_reg[4]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/mt/gs/prev_tx_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (dst/sp/pc_reg[0]) is unused and will be removed from module DemoTop.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 774.484 ; gain = 484.438
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 775.301 ; gain = 485.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -685,13 +721,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 782.238 ; gain = 492.191
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 789.879 ; gain = 499.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 782.906 ; gain = 492.859
+Finished Timing Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 790.621 ; gain = 500.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -703,7 +739,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Finished Technology Mapping : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -727,7 +763,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Finished IO Insertion : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -740,7 +776,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -752,25 +788,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -789,17 +825,17 @@ Report Cell Usage:
 +------+---------+------+
 |1     |inst_ram |     1|
 |2     |BUFG     |     3|
-|3     |CARRY4   |    72|
-|4     |LUT1     |    10|
-|5     |LUT2     |    96|
-|6     |LUT3     |   393|
-|7     |LUT4     |   112|
-|8     |LUT5     |    63|
-|9     |LUT6     |    95|
-|10    |FDCE     |   198|
-|11    |FDPE     |     6|
-|12    |FDRE     |   234|
-|13    |FDSE     |     1|
+|3     |CARRY4   |   112|
+|4     |LUT1     |     8|
+|5     |LUT2     |   373|
+|6     |LUT3     |   397|
+|7     |LUT4     |   147|
+|8     |LUT5     |   100|
+|9     |LUT6     |    97|
+|10    |FDCE     |   363|
+|11    |FDPE     |    11|
+|12    |FDRE     |   225|
+|13    |FDSE     |    10|
 |14    |LD       |    36|
 |15    |LDC      |     2|
 |16    |IBUF     |    14|
@@ -811,40 +847,45 @@ Report Instance Areas:
 +------+--------------------+-----------------------+------+
 |      |Instance            |Module                 |Cells |
 +------+--------------------+-----------------------+------+
-|1     |top                 |                       |  1368|
+|1     |top                 |                       |  1931|
 |2     |  c                 |DelayClock             |    52|
-|3     |  dst               |DesignedTop            |   408|
-|4     |    mt              |ManualTop              |   117|
+|3     |  dst               |DesignedTop            |   394|
+|4     |    mt              |ManualTop              |   113|
 |5     |      gs            |GameStateEncoder       |     8|
-|6     |      tsm           |TargetStateMachine     |    23|
-|7     |    sp              |ScriptTop              |   220|
+|6     |      tsm           |TargetStateMachine     |    22|
+|7     |    sp              |ScriptTop              |   219|
 |8     |      as            |ActionScriptHandler    |    17|
 |9     |      gs            |GameStateScriptHandler |     2|
 |10    |      js            |JumpScriptHandler      |    26|
-|11    |      ws            |WaitScriptHandler      |    82|
-|12    |        u           |Wait                   |    80|
-|13    |    sse             |SwitchStateEncoder     |     5|
-|14    |    trg             |TargetRegister         |    49|
+|11    |      ws            |WaitScriptHandler      |    84|
+|12    |        u           |Wait                   |    82|
+|13    |    sse             |SwitchStateEncoder     |     4|
+|14    |    trg             |TargetRegister         |    42|
 |15    |  script_mem_module |ScriptMem              |    85|
-|16    |  sd                |SwitchesDebounce       |   703|
-|17    |    s0              |key_debounce           |   117|
-|18    |    s1              |key_debounce_0         |   119|
-|19    |    s2              |key_debounce_1         |   117|
-|20    |    s3              |key_debounce_2         |   118|
-|21    |    s4              |key_debounce_3         |   115|
-|22    |    s5              |key_debounce_4         |   117|
-|23    |  uart_module       |UART                   |    86|
-|24    |    rx              |UARTReceiver           |    38|
-|25    |    tx              |UARTTransmitter        |    27|
+|16    |  sd                |SwitchesDebounce       |  1280|
+|17    |    b0              |key_debounce           |   116|
+|18    |    b1              |key_debounce_0         |   116|
+|19    |    b2              |key_debounce_1         |   117|
+|20    |    b3              |key_debounce_2         |   119|
+|21    |    b4              |key_debounce_3         |   116|
+|22    |    s0              |key_debounce_4         |   116|
+|23    |    s1              |key_debounce_5         |   117|
+|24    |    s2              |key_debounce_6         |   117|
+|25    |    s3              |key_debounce_7         |   116|
+|26    |    s4              |key_debounce_8         |   115|
+|27    |    s5              |key_debounce_9         |   115|
+|28    |  uart_module       |UART                   |    86|
+|29    |    rx              |UARTReceiver           |    38|
+|30    |    tx              |UARTTransmitter        |    27|
 +------+--------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 143 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 809.020 ; gain = 185.270
-Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 809.020 ; gain = 518.973
+Synthesis finished with 0 errors, 0 critical warnings and 170 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 818.965 ; gain = 193.234
+Synthesis Optimization Complete : Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 818.965 ; gain = 528.699
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 124 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 164 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -854,10 +895,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-102 Infos, 260 Warnings, 0 Critical Warnings and 0 Errors encountered.
+104 Infos, 275 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 809.020 ; gain = 527.742
+synth_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 818.965 ; gain = 537.516
 INFO: [Common 17-1381] The checkpoint 'D:/ComputerScience/Projects/DigitalLogicProj/project/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DemoTop_utilization_synth.rpt -pb DemoTop_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 809.020 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 28 00:41:20 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 818.965 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 29 12:50:56 2023...

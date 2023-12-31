@@ -74,10 +74,11 @@ module DemoTop(
           .io_dataOut_bits(dataOut_bits),     // (b) byte from GenshinKitchen => DevelopmentBoard, only available if io_dataOut_valid=1
           .io_dataOut_valid(dataOut_valid)  // referring (b)
         );
-
-  wire clk_slow;
+    //时钟分频
+    wire clk_slow;
     DelayClock c(.clk(clk),.out(uart_clk_16));
 
+    //按钮消抖
     wire [7:0] fix_switches;
     wire [5:0] fix_button;
     SwitchesDebounce sd(
@@ -89,9 +90,11 @@ module DemoTop(
       .fix_switches(fix_switches)
     );
 
+    //游戏逻辑模块
     DesignedTop dst(
     .origin_clk(clk),
     .clk(uart_clk_16),
+    .rst_n(rst_n),
     .button(fix_button),
     .switches(fix_switches),
     .led(led),
@@ -107,5 +110,12 @@ module DemoTop(
     .dataIn_bits(dataIn_bits),
     .dataIn_ready(dataIn_ready)
     );
+    
+    // loadingLamp ld(
+    //   .clk(clk),
+    //   .rst_n(rst_n),
+    //   .enable(1'b1),
+    //   .loadingLamp(led2)
+    // );
 endmodule
 

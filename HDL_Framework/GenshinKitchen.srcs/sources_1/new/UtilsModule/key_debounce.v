@@ -12,19 +12,23 @@ input key,
 output reg key_flag,
 output reg key_value
 );
-//爬的网上的代码，自己稍微修改了一下
 
-//period可以更改，即为希望多少个周期判断一次，这里应该是100ms
-parameter period = 500000;
+//指定判断的时钟周期
+parameter period = 5000;
+parameter init=0;
+parameter key_true=1'b1;
+parameter div=1;
+parameter key_false=1'b0;
+
+//消抖模块的延时计数
 reg [31:0] delay_cnt;
 reg key_reg;
-
 always@(posedge clk or negedge rst_n)
 begin
     if(!rst_n)
     begin
-        delay_cnt <= 32'd0;
-        key_reg <= 1'b1;
+        delay_cnt <= init;
+        key_reg <= key_true;
     end
     else
     begin
@@ -32,32 +36,34 @@ begin
             delay_cnt <= period;
         else
         begin
-            if(delay_cnt > 20'd0)
-                delay_cnt <= delay_cnt-1'b1;
+            if(delay_cnt > init)
+                delay_cnt <= delay_cnt-div;
             else
                 delay_cnt <= delay_cnt;
         end
         key_reg<=key;
     end
 end
-
+//在每个上升沿更新按键状态数据
 always@(posedge clk or negedge rst_n)
 begin
-    if(!rst_n)
+    if(!rst_n)//rst重置
     begin
-        key_flag <= 1'b0;
-        key_value <= 1'b0;
+        key_flag <= key_false;
+        key_value <= key_false;
     end
     else
     begin
-        if(delay_cnt == 20'd1)
+        if(delay_cnt == init)
         begin
+            //完成计数输出稳定数据
             key_value <= key;
-            key_flag <= 1'b1;
+            key_flag <= key_true;
         end
         else
         begin
-            key_flag <= 1'b0;
+            //当前按键状态不稳定，保持上一按键状态
+            key_flag <= key_false;
             key_value <= key_value;
         end
     end

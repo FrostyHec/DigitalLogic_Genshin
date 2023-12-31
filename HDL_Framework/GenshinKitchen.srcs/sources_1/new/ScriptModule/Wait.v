@@ -1,44 +1,55 @@
 `include "../ConstValue.vh"
 `timescale 1ns / 1ps
+//等待指定的xx*100ms
 module Wait(
 input clk, en,
 input [7:0] i_num,
-output reg isFinished//输出这个条件是否被满�?,1为满足，0为未满足
-
-,output reg led=1'b0//???????????????????????????????????
+//输出是否等待结束
+output reg isFinished
 );
+//模块所需参数
+parameter period = 2000_000_0; //100ms周期
+parameter init_i=8'd0;
+parameter init_cnt=0;
+parameter div=1;
+parameter dec=1;
+parameter finished_true =1'b1;
+parameter finished_false =1'b0;
 
-parameter period = 2000_000_0; //100ms(不是很确定哇)
-reg [31:0] cnt=1'd0;
-reg [7:0] i = 8'd0;
 
+reg [31:0] cnt=init_cnt;//每100ms完成一次cnt计数
+reg [7:0] i = init_i;//已经完成的100ms个数
+//时钟周期计数
 always @(posedge clk)
 begin
     if(~en)
     begin
-        cnt <= 0;
-        i <= 8'd0;
-        isFinished <= 1'b0;
+        //在未激活时保持初始状态
+        cnt <= init_cnt;
+        i <= init_i;
+        isFinished <= finished_false;
     end
     else
     begin
-        if(cnt >= (period >> 1) - 1)
-        begin 
-            if(i >= i_num)
+        //在每个时钟周期进行计数直至时间抵达
+        if(cnt >= (period >> dec) - div)
+        begin
+            //100ms结束 
+            if(i >= i_num)//计时结束
             begin
-                led<=1'b0;
-                isFinished <= 1'b1;
-                i <= 8'd0;
+                isFinished <= finished_true;
+                i <= init_i;
             end else
             begin
-                i <= i+1;
+                //下一个100ms
+                i <= i+div;
             end
-            cnt <= 0;
+            cnt <= init_cnt;
         end
         else 
         begin
-            led<=1'b1;
-            cnt <= cnt + 1;
+            //100ms未结束
+            cnt <= cnt + div;
         end
     end
 end

@@ -77,6 +77,44 @@ output [7:0] fix_switches
         .key(switches[7]),
         .key_value(switches7)
     );
-    assign fix_button=button;
     assign fix_switches={switches7,switches6,switches5,switches4,switches3,switches2,switches1,switches0};
+
+    wire btn0,btn1,btn2,btn3,btn4;
+    key_debounce b0(
+        .clk(clk),
+        .rst_n(rst_n),
+        .key(button[0]),
+        .key_value(btn0)
+    );
+
+    key_debounce b1(
+        .clk(clk),
+        .rst_n(rst_n),
+        .key(button[1]),
+        .key_value(btn1)
+    );
+
+    key_debounce b2(
+        .clk(clk),
+        .rst_n(rst_n),
+        .key(button[2]),
+        .key_value(btn2)
+    );
+
+    key_debounce b3(
+        .clk(clk),
+        .rst_n(rst_n),
+        .key(button[3]),
+        .key_value(btn3)
+    );
+
+    key_debounce b4(
+        .clk(clk),
+        .rst_n(rst_n),
+        .key(button[4]),
+        .key_value(btn4)
+    );
+    assign fix_button={btn4,btn3,btn2,btn1,btn0};
+    //assign fix_button=button;
+
 endmodule

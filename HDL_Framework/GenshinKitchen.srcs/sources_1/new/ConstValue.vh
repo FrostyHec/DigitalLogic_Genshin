@@ -23,15 +23,13 @@
 `define Out_LED_HasItemInHand 1
 `define Out_LED_IsProcessing 2
 `define Out_LED_MachineHasItem 3
+`define Out_LED_Feedback 3:0
+`define Out_LED_CurrentScript 7
 
-//-----Encoder-----
-// `define Encoder_Btn_TargetUp 1
-// `define Encoder_Btn_TargetDown 0
-// `define Encoder_btn
 
 
 //---------------URAT Communication Protocol---------------
-
+`define Counter_Div 325
 //Channel
 `define Sender_Channel_Ignore 2'b00
 `define Sender_Channel_GameStateChanged 2'b01
@@ -64,7 +62,7 @@
 `define Receiver_Feedback_IsProcessing 4
 `define Receiver_Feedback_MachineHasItem 5
 `define Receiver_Channel_Script 2'b10
-
+`define Receiver_Feedback_part 5:2
 
 //--------------The Game Itself---------------
 //-----targets-----
@@ -126,7 +124,10 @@
 `define Script_Operate_Interact 2'b10
 `define Script_Operate_Throw 2'b11
 
-//1226
+`define activate_signal 1'b1
+`define unactivate_signal 1'b0
 
+`define Script_Wait_WaitTime 2'b00
+`define Script_Wait_WaitUntil 2'b01
 
-//
+`define Script_initialPC 8'b0000_0000-2

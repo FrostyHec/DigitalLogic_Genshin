@@ -3,55 +3,57 @@
 
 module loadingLamp (
     input clk,rst_n,enable,
-    output reg[7:0] loadingLamp
+    output [7:0] loadingLamp
 );
-//隔多久闪一次
-parameter p1 = 10000_0000;
-//闪几次加1
-parameter p2 = 20;
-reg[2:0] state = 3'd0;
-reg[31:0] counter1 = 1'b0;
-reg[3:0] counter2 = 1'b0;
-reg lamp = 1'b0;
-
+//参数
+parameter p1 = 10000_0000;//隔多久闪一次
+parameter p2 = 20;//闪几次加1
+parameter init=0;
+parameter lamp_on=1'b1;
+parameter lamp_of=1'b0;
+//计数器
+reg[2:0] state = init;
+reg[31:0] counter1 = init;
+reg[3:0] counter2 =init;
+reg[23:0] l;
+assign loadingLamp = l[15:7];
+reg lamp = init;
+//在每个时钟上升沿进行计数与led显示更新
 always @(posedge clk, negedge rst_n)
 begin
     if(enable)
     begin
         if(~rst_n)
         begin
-            loadingLamp <= 8'd0;
+            l <= 16'd0;
             lamp <= 1'b0;
         end
         else
         begin
-            //tb是正常的，但是就是不知道这样写上板之后会不会有别的影响，毕竟可能会影响到附近的reg
-            //如果不行的话可能就只能按照state分类搞了
-            //不知道这个存reg的机理是什么，如果是直接抹去获取不了的reg的话应该就没有问题
-            loadingLamp[state-1] <= 1'b1;
-            loadingLamp[state-2] <= 1'b1;
-            loadingLamp[state-3] <= 1'b1;
-            loadingLamp[state-4] <= 1'b1;
-            loadingLamp[state-5] <= 1'b1;
-            loadingLamp[state-6] <= 1'b1;
-            loadingLamp[state-7] <= 1'b1;
-            
-            loadingLamp[state] <= lamp;
-            
-            loadingLamp[state+1] <= 1'b0;
-            loadingLamp[state+2] <= 1'b0;
-            loadingLamp[state+3] <= 1'b0;
-            loadingLamp[state+4] <= 1'b0;
-            loadingLamp[state+5] <= 1'b0;
-            loadingLamp[state+6] <= 1'b0;
-            loadingLamp[state+7] <= 1'b0;
+            //完成了tb测试，loadingLamp是正常的
+            //寄存器位移
+            l[state] <= 1'b1;
+            l[state+1] <= 1'b1;
+            l[state+2] <= 1'b1;
+            l[state+3] <= 1'b1;
+            l[state+4] <= 1'b1;
+            l[state+5] <= 1'b1;
+            l[state+6] <= 1'b1;
+            l[state+7] <= lamp;
+        
+            l[state+8] <= 1'b0;
+            l[state+9] <= 1'b0;
+            l[state+10] <= 1'b0;
+            l[state+11] <= 1'b0;
+            l[state+12] <= 1'b0;
+            l[state+13] <= 1'b0;
+            l[state+14] <= 1'b0;
 
             if(counter1 >= p1)
             begin
                 lamp <= ~lamp;
                 if(counter2 >= p2)
                 begin
-                    //这个也有可能会溢出，进而对reg外面的玩意造成影响
                     state <= state + 1;
                     counter2 <= 0;
                 end
@@ -62,7 +64,7 @@ begin
             end
             else
             begin
-                counter1 = counter1 + 1;
+                counter1 <= counter1 + 1;
             end
         end
     end

@@ -27,6 +27,7 @@
 //3.target machine合法性
 module ManualFliter(
 input [7:0] prev_tx,feedback,
+input feedback_valid,
 input [5:0] target_machine,
 output reg [7:0] tx
     );
@@ -47,12 +48,12 @@ output reg [7:0] tx
         .throwable(throwable),
         .istable(istable)
     );
-
+//Signal Filter
     always @*
     begin
     if(prev_tx_channel == `Sender_Channel_Operate) begin
-        if(prev_tx==8'b0000_0010) begin
-            tx=8'b0000_0010;
+        if(prev_tx=={`Sender_Data_Ignore,`Sender_Channel_Operate}) begin
+            tx={`Sender_Data_Ignore,`Sender_Channel_Operate};
         end
         else if(feedback_channel == `Receiver_Channel_FeedBack) begin
             

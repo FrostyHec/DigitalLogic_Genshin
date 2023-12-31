@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Dec 28 00:41:57 2023
+| Date         : Fri Dec 29 12:51:35 2023
 | Host         : LAPTOP-OLOKS0CM running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file DemoTop_timing_summary_routed.rpt -rpx DemoTop_timing_summary_routed.rpx -warn_on_violation
 | Design       : DemoTop
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 279 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 449 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
  There are 161 register/latch pins with no clock driven by root clock pin: c/out_reg/Q (HIGH)
 
@@ -66,33 +66,33 @@ Table of Contents
 
  There is 1 register/latch pin with no clock driven by root clock pin: dst/sse/switch_init_reg/Q (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[0]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[0]/Q (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[1]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[1]/Q (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[2]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[2]/Q (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[3]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[3]/Q (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[4]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[4]/Q (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[5]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: dst/trg/state_reg[5]/Q (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[10] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[10] (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[11] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[11] (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[12] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[12] (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[13] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[13] (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[3] (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[3] (HIGH)
 
- There are 10 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[4] (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[4] (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[8] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[8] (HIGH)
 
- There are 13 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[9] (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: script_mem_module/ram_module/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/DOADO[9] (HIGH)
 
  There is 1 register/latch pin with no clock driven by root clock pin: script_mem_module/script_cnt_reg[0]/Q (HIGH)
 
@@ -126,11 +126,9 @@ Table of Contents
 
  There is 1 register/latch pin with no clock driven by root clock pin: script_mem_module/script_size_reg[7]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: sd/s2/key_value_reg/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: sd/b1/key_value_reg/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: sd/s3/key_value_reg/Q (HIGH)
-
- There are 7 register/latch pins with no clock driven by root clock pin: uart_module/io_dataOut_bits_reg[2]/Q (HIGH)
+ There are 6 register/latch pins with no clock driven by root clock pin: sd/b4/key_value_reg/Q (HIGH)
 
  There are 27 register/latch pins with no clock driven by root clock pin: uart_module/io_dataOut_valid_reg/Q (HIGH)
 
@@ -147,7 +145,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 1117 pins that are not constrained for maximum delay. (HIGH)
+ There are 1648 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -195,7 +193,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 2 combinational latch loops in the design through latch input (HIGH)
+ There is 1 combinational latch loop in the design through latch input (HIGH)
 
 
 

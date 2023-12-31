@@ -20,7 +20,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//targetStateMachine模块用于判断Manual模式下用户是否进行了一次当前目标机器的切换
+//如果切换了，则依据传入的state将state+-1传出，并激活一个时钟周期的activate
 module TargetStateMachine(
 input [1:0] in,
 input en,
@@ -34,15 +35,17 @@ output reg activation
     parameter target_down=0;
 
     reg [1:0] prev_in;
-    always @(posedge clk) begin//reg //考虑是不是可以删掉啊
-        if(prev_in==in|in==no_press) begin
-            activation<=1'b0;
+    //确保激活一个时钟周期的active
+    always @(posedge clk) begin
+        if(prev_in==in|in==no_press) begin//当前信号与上个信号相同/当前没有输入激活
+            activation<=`unactivate_signal;
         end
-        else begin 
-            activation<=1'b1;
+        else begin //当前信号不同于上个周期，发送一次脉冲
+            activation<=`activate_signal;
         end
         prev_in<=in;
     end
+    //切换targetMachine的组合逻辑
     always @(in) begin
         if(en&in!=no_press) begin //enable
             if(in[target_up]) begin
@@ -50,6 +53,7 @@ output reg activation
             end else if(in[target_down]) begin
                 next_state=state-1;
             end
+            //过滤targetMachine>20或<1
             if(next_state>`Targeting_Max) begin
                 next_state=`Targeting_Initial; 
             end else if(next_state<`Targeting_Initial) begin

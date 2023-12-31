@@ -20,17 +20,17 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//operationEncoder用于解析Manual模式下按下按钮所执行的GPIMT操作
 module OperationEncoder(
 input [4:0] button,
-input enable,clk,
+input enable,clk,rst_n,
 output reg [7:0] tx,
-output reg activation
+output reg activation=`unactivate_signal
     );
-
+//一段组合逻辑，在启动且并非清零的状态依据用户按下按钮的状况发出指令
 always @(*) begin
-    if (enable) begin
-        activation = 1'b1;
+    if (enable&&rst_n) begin
+        activation = `activate_signal;
         case(button)
             `oe_get: tx={`Sender_Operation_Get,`Sender_Channel_Operate};
             `oe_put: tx={`Sender_Operation_Put,`Sender_Channel_Operate};
@@ -39,12 +39,12 @@ always @(*) begin
             `oe_thr: tx={`Sender_Operation_Throw,`Sender_Channel_Operate};
             default: begin
                 tx={`Sender_Data_Ignore,`Sender_Channel_Operate};  
-                activation=1'b0;
+                activation=`unactivate_signal;
             end 
         endcase
     end else begin 
-        tx = {`Sender_Data_Ignore,`Sender_Channel_Operate};
-        activation = 1'b0;
+        tx = {`Sender_Data_Ignore,`Sender_Channel_Operate};//清零
+        activation = `unactivate_signal;
     end
 end
 endmodule

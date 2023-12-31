@@ -20,7 +20,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//我希望它的功能是，当我给它传入一个新的state后，它把这个新的state赋给旧的
+//依据传入的state在下个时钟周期对state进行更新
 module TargetRegister(
 input [5:0] next_state,
 input next_state_activation,
@@ -29,14 +29,11 @@ input rst_n,
 output reg [5:0] state =`Targeting_Initial
     );
     always @(posedge clk) begin
-        if(~rst_n) begin
+        if(~rst_n) begin//rst时置为初始状态
             state <=`Targeting_Initial;
         end else if(next_state_activation) begin
-            state <=next_state;
+            state <=next_state;//更新激活则更新state
         end
     end
-    // always @(posedge next_state) begin
-    //     state<=next_state;
-    // end
 endmodule
 

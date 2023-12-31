@@ -28,24 +28,24 @@ output reg throwable,
 output istable
     );
     reg trash_bin;
-    
+//判断是不是垃圾桶
     always @*
     begin
         if(target_machine == `Game_Trash_bin) begin
-            trash_bin = 1'b1;
+            trash_bin = `activate_signal;
         end
         else begin
-            trash_bin = 1'b0;
+            trash_bin = `unactivate_signal;
         end
     end
-
+//判断是不是throwable
     assign istable = throwable & ~trash_bin;
 
     always @*
     begin
         case(target_machine)
             `Game_Table_1, `Game_Table_2, `Game_Table_3, `Game_Table_4, `Game_Trash_bin: throwable = 1'b1; //throwable
-            default: throwable = 1'b0; //unthrowable
+            default: throwable =`unactivate_signal; //unthrowable
         endcase
     end
 endmodule
