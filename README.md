@@ -78,7 +78,7 @@ implemented. The specific basic functionalities implemented are as follows:
     - [x] Script speed optimization
 
 ### Interaction Description
-![io_ports.png](Docs%2Fpics%2Fio_ports.png)
+![io_ports.png](Docs/pics/io_ports.png)
 
 ## Development Summary
 
@@ -176,7 +176,7 @@ DarkChess
     -  [x] 脚本提速优化
 
 ### 开发板交互说明
-![io_ports.png](Docs%2Fpics%2Fio_ports.png)
+![io_ports.png](Docs/pics/io_ports.png)
 
 ## 开发总结
 
