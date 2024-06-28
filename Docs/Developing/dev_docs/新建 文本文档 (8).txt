@@ -1,0 +1,11 @@
+game start
+jumpifnot target_ready 2
+get 4
+get 5
+game end
+
+game start
+jumpif player_hasitem 2
+get 4
+get 5
+game end

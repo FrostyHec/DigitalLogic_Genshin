@@ -1,0 +1,46 @@
+jumpifnot player_hasitem 2
+throw 20
+
+jumpif target_hasitem 2
+wait 60
+get 1
+put 8
+jumpifnot player_hasitem 2
+throw 20
+get 8
+
+jumpifnot player_hasitem 2
+throw 20
+wait 20
+get 3
+put 12
+jumpifnot player_hasitem 2
+throw 20
+jumpifnot target_hasitem 3
+get 12
+throw 20
+jumpifnot target_hasitem 3
+get 12
+throw 20
+jumpifnot target_hasitem 3
+get 12
+throw 20
+
+wait 20
+get 3
+put 12
+get 1
+put 12
+interact 12
+waituntil target_ready
+get 1
+put 19
+jumpifnot player_hasitem 2
+throw 20
+get 19
+throw 20
+
+get 12
+throw 19
+get 19
+put 18

@@ -78,3 +78,4 @@
 {"ts":1719577965751,"action":"PROJECT_CLOSED","tags":{"PROJECT_NAME":"GenshinKitchen_CS211_Project"}}
 {"ts":1719578328451,"action":"FILE_OPENED","file":"/README.md","tags":{"FILE_LINE_OF_CODE":"14"}}
 {"ts":1719578329007,"action":"PROJECT_OPENED","tags":{"PROJECT_NAME":"GenshinKitchen_CS211_Project"}}
+{"ts":1719578383777,"action":"IDE_DEACTIVATED"}
