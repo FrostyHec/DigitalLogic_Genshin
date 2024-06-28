@@ -25,7 +25,7 @@ Support playing Genshin Kitchen game through the Embedded Development Board.
 
 **Enjoy the game!**
 
-![img.png](img.png)
+![img.png](Docs/pics/img.png)
 
 </div>
 
@@ -48,6 +48,7 @@ DarkChess
 ├── Docs             
 │   ├── Developing              # Development process files
 │   ├── Reference               # Reference materials
+│   ├── Requirements            # Project Requirements
 │   └── Report                  # Presentation materials, reports, and bonus videos       
 ├── .gitignore
 ├── LICENSE
@@ -75,6 +76,9 @@ implemented. The specific basic functionalities implemented are as follows:
 - [x] Script Design
     - [x] Demo script design
     - [x] Script speed optimization
+
+### Interaction Description
+![io_ports.png](Docs%2Fpics%2Fio_ports.png)
 
 ## Development Summary
 
@@ -144,6 +148,7 @@ DarkChess
 ├── Docs             
 │   ├── Developing              # 开发过程中文件
 │   ├── Reference               # 参考资料
+│   ├── Requirements            # 项目要求
 │   └── Report                  # 答辩资料,报告与bonus视频       
 ├── .gitignore
 ├── LICENSE
@@ -169,6 +174,9 @@ DarkChess
 - [x] 脚本设计
     -  [x] 展示脚本设计
     -  [x] 脚本提速优化
+
+### 开发板交互说明
+![io_ports.png](Docs%2Fpics%2Fio_ports.png)
 
 ## 开发总结
 
