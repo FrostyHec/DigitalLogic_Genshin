@@ -125,6 +125,8 @@ hardware development knowledge learned over the past year (although I might not 
 development in the future D: . Later I will write some notes to summarize the gains of this
 year).
 
+——Frosty
+
 ## 项目介绍
 
 本章节主要介绍现有仓库架构与本项目的基本功能信息，详细的硬件代码框架介绍可参考[项目文档](Docs/Report/Digital Logic Document(祝超,何俞均,黄政东).pdf)
@@ -206,3 +208,5 @@ DarkChess
 
 也是踩过了坑才有了收获，这些经验也最终帮助我们在下一学期完成了[CPUdemo](https://github.com/FrostyHec/CPUdemo)
 项目，也感谢这一年来所学到的硬件开发知识（以后可能不走硬件路了QAQ，还是写点笔记总结下这年的收获吧）
+
+——Frosty
