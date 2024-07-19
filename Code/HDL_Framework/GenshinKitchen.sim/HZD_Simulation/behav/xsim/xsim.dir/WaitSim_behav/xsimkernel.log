@@ -1,4 +1,0 @@
-Running: xsim.dir/WaitSim_behav/xsimk.exe -simmode gui -wdb WaitSim_behav.wdb -simrunnum 0 -socket 5038
-Design successfully loaded
-Design Loading Memory Usage: 8300 KB (Peak: 8300 KB)
-Design Loading CPU Usage: 15 ms
