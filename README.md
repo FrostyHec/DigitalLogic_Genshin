@@ -133,7 +133,7 @@ year).
 
 ## 项目介绍
 
-本章节主要介绍现有仓库架构与本项目的基本功能信息，详细的硬件代码框架介绍可参考[项目文档](Docs/Report/Digital Logic Document(祝超,何俞均,黄政东).pdf)
+本章节主要介绍现有仓库架构与本项目的基本功能信息，详细的硬件代码框架介绍可参考 [项目文档](Docs/Report/Digital Logic Document(祝超,何俞均,黄政东).pdf)
 
 ### 项目结构
 
